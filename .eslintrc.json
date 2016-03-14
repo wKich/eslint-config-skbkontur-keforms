@@ -6,16 +6,21 @@
     "es6": true
   },
   "plugins": [
+    "babel",
     "import",
-    "react",
-    "babel"
+    "react"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "experimentalObjectRestSpread": true
+    }
+  },
+  "settings": {
+    "react": {
+      "pragma": "React"
     }
   },
   "rules": {
@@ -30,8 +35,8 @@
     "no-dupe-args": 2,
     "no-dupe-keys": 2,
     "no-duplicate-case": 2,
-    "no-empty-character-class": 2,
     "no-empty": 2,
+    "no-empty-character-class": 2,
     "no-ex-assign": 2,
     "no-extra-boolean-cast": 2,
     "no-extra-parens": 2,
@@ -75,10 +80,6 @@
     "no-case-declarations": 2,
     "no-div-regex": 2,
     "no-else-return": 2,
-    "no-labels": [ 2, {
-      "allowLoop": true,
-      "allowSwitch": true
-    } ],
     "no-empty-function": [ 2, { "allow": [] } ],
     "no-empty-pattern": 2,
     "no-eq-null": 0,
@@ -93,7 +94,10 @@
     "no-implied-eval": 2,
     "no-invalid-this": 2,
     "no-iterator": 2,
-    "no-labels": 2,
+    "no-labels": [ 2, {
+      "allowLoop": true,
+      "allowSwitch": true
+    } ],
     "no-lone-blocks": 2,
     "no-loop-func": 2,
     "no-magic-numbers": [ 0, {
@@ -106,13 +110,12 @@
     } ],
     "no-multi-str": 2,
     "no-native-reassign": 2,
+    "no-new": 2,
     "no-new-func": 2,
     "no-new-wrappers": 2,
-    "no-new": 2,
-    "no-octal-escape": 2,
     "no-octal": 2,
+    "no-octal-escape": 2,
     "no-param-reassign": [ 2, { "props": true } ],
-    "no-process-env": 2,
     "no-proto": 2,
     "no-redeclare": [ 2, { "builtinGlobals": true } ],
     "no-return-assign": [ 2, "always" ],
@@ -152,14 +155,15 @@
     "no-catch-shadow": 2,
     "no-delete-var": 2,
     "no-label-var": 2,
-    "no-shadow-restricted-names": 2,
+    "no-restricted-globals": [ 2, "event" ],
     "no-shadow": [ 2, {
       "builtinGlobals": true,
       "hoist": "all",
       "allow": []
     } ],
-    "no-undef-init": 2,
+    "no-shadow-restricted-names": 2,
     "no-undef": 2,
+    "no-undef-init": 2,
     "no-undefined": 2,
     "no-unused-vars": [ 2, {
       "vars": "all",
@@ -176,8 +180,8 @@
     "no-mixed-requires": 2,
     "no-new-require": 2,
     "no-path-concat": 2,
+    "no-process-env": 2,
     "no-process-exit": 2,
-    "no-restricted-imports": 0,
     "no-restricted-modules": 0,
     "no-sync": 0,
     /*********************************/
@@ -225,7 +229,7 @@
       "overrides": {}
     } ],
     "linebreak-style": [ 2, "unix" ],
-    "lines-around-comment": [ 0, {
+    "lines-around-comment": [ 1, {
       "beforeBlockComment": true,
       "afterBlockComment": false,
       "beforeLineComment": true,
@@ -241,7 +245,8 @@
       "capIsNew": false
     } ],
     "new-parens": 2,
-    "newline-after-var": [ 0, "always" ],
+    "newline-after-var": [ 1, "always" ],
+    "newline-before-return": 2,
     "newline-per-chained-call": [ 2, { "ignoreChainWithDepth": 2 } ],
     "no-array-constructor": 2,
     "no-bitwise": 0,
@@ -284,11 +289,11 @@
         "ClassDeclaration": true
       }
     } ],
+    "semi": [ 2, "never" ],
     "semi-spacing": [ 2, {
       "before": false,
       "after": true
     } ],
-    "semi": [ 2, "never" ],
     "sort-imports": [ 2, {
       "ignoreCase": false,
       "ignoreMemberSort": false,
@@ -328,15 +333,15 @@
       "after": true
     } ],
     "constructor-super": 2,
-    "generator-star-spacing": [ 0 /* Use Babel instead */, {
-      "before": true,
-      "after": false
-    } ],
+    "generator-star-spacing": [ 2, "after" ],
     "no-class-assign": 2,
-    "no-confusing-arrow": 2,
+    "no-confusing-arrow": [ 2, {
+      "allowParens": true
+    } ],
     "no-const-assign": 2,
     "no-dupe-class-members": 2,
     "no-new-symbol": 2,
+    "no-restricted-imports": 0,
     "no-this-before-super": 2,
     "no-useless-constructor": 2,
     "no-var": 2,
@@ -354,11 +359,7 @@
 
 
     /************* Babel *************/
-    "babel/generator-star-spacing": [ 2, {
-      "before": true,
-      "after": false
-    } ],
-    "babel/no-await-in-loop": 2
+    "babel/no-await-in-loop": 2,
     /*********************************/
 
 
@@ -375,7 +376,122 @@
     "import/no-commonjs": 2,
     "import/no-amd": 2,
     "import/imports-first": [ 2, "absolute-first" ],
-    "import/no-duplicates": 2
+    "import/no-duplicates": 2,
+    /*********************************/
+
+
+    /************* React *************/
+    "react/display-name": [ 2, {
+      "ignoreTranspilerName": false
+    } ],
+    "react/forbid-prop-types": [ 0, { "forbid": [] } ],
+    "react/no-danger": 2,
+    "react/no-deprecated": [ 2, { "react": "0.14.0" } ],
+    "react/no-did-mount-set-state": [ 2, "allow-in-func" ],
+    "react/no-did-update-set-state": [ 2, "allow-in-func" ],
+    "react/no-direct-mutation-state": 2,
+    "react/no-is-mounted": 2,
+    "react/no-multi-comp": [ 2, {
+      "ignoreStateless": false
+    } ],
+    "react/no-set-state": 2,
+    "react/no-string-refs": 2,
+    "react/no-unknown-property": 2,
+    "react/prefer-es6-class": [ 0, "always" ],
+    "react/prefer-stateless-function": 2,
+    "react/prop-types": [ 2, {
+      "ignore": [],
+      "customValidators": []
+    } ],
+    "react/react-in-jsx-scope": 2,
+    "react/require-extension": [ 2, {
+      "extensions": [ ".js", ".jsx" ]
+    } ],
+    "react/self-closing-comp": 2,
+    "react/sort-comp": [ 2, {
+      "order": [
+        "static-methods",
+        "lifecycle",
+        "everything-else",
+        "/^on.+$/",
+        "rendering"
+      ],
+      "groups": {
+        "rendering": [
+          "/^render.+$/",
+          "render"
+        ],
+        "lifecycle": [
+          "displayName",
+          "propTypes",
+          "contextTypes",
+          "childContextTypes",
+          "mixins",
+          "statics",
+          "defaultProps",
+          "constructor",
+          "getDefaultProps",
+          "getInitialState",
+          "state",
+          "getChildContext",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount"
+        ]
+      }
+    } ],
+    "react/sort-prop-types": [ 2, {
+      "callbacksLast": true,
+      "ignoreCase": false,
+      "requiredFirst": true
+    } ],
+    "react/wrap-multilines": [ 2, {
+      "declaration": true,
+      "assignment": true,
+      "return": true
+    } ],
+    "react/jsx-boolean-value": [ 2, "never" ],
+    "react/jsx-closing-bracket-location": [ 2, {
+      "nonEmpty": "tag-aligned",
+      "selfClosing": "tag-aligned"
+    } ],
+    "react/jsx-curly-spacing": [ 2, "never", {
+      "allowMultiline": true
+    } ],
+    "react/jsx-equals-spacing": [ 2, "never" ],
+    "react/jsx-handler-names": [ 2, {
+      "eventHandlerPrefix": "handle",
+      "eventHandlerPropPrefix": "on"
+    } ],
+    "react/jsx-indent-props": [ 2, 2 ],
+    "react/jsx-indent": [ 2, 2 ],
+    "react/jsx-key": 2,
+    "react/jsx-max-props-per-line": [ 2, {
+      "maximum": 1
+    } ],
+    "react/jsx-no-bind": [ 2, {
+      "ignoreRefs": false,
+      "allowArrowFunctions": false,
+      "allowBind": false
+    } ],
+    "react/jsx-no-duplicate-props": [ 2, {
+      "ignoreCase": false
+    } ],
+    "react/jsx-no-literals": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-pascal-case": 2,
+    "react/jsx-sort-props": [ 2, {
+      "callbacksLast": true,
+      "ignoreCase": false,
+      "shorthandFirst": true
+    } ],
+    "react/jsx-space-before-closing": [ 2, "always" ],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2
     /*********************************/
   }
 }
