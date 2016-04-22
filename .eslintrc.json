@@ -35,11 +35,16 @@
     "no-dupe-args": 2,
     "no-dupe-keys": 2,
     "no-duplicate-case": 2,
-    "no-empty": 2,
+    "no-empty": [ 2, {
+      "allowEmptyCatch": false
+    } ],
     "no-empty-character-class": 2,
     "no-ex-assign": 2,
     "no-extra-boolean-cast": 2,
-    "no-extra-parens": 2,
+    "no-extra-parens": [ 2, "all", {
+      "conditionalAssign": true,
+      "nestedBinaryExpressions": true
+    } ],
     "no-extra-semi": 2,
     "no-func-assign": 2,
     "no-inner-declarations": [ 2, "both" ],
@@ -87,7 +92,9 @@
     "no-extend-native": 2,
     "no-extra-bind": 2,
     "no-extra-label": 2,
-    "no-fallthrough": 2,
+    "no-fallthrough": [ 2, {
+      "commentPattern": "break[\\s\\w]*omitted"
+    } ],
     "no-floating-decimal": 2,
     "no-implicit-coercion": 0,
     "no-implicit-globals": 2,
@@ -132,6 +139,7 @@
     "no-unused-labels": 2,
     "no-useless-call": 2,
     "no-useless-concat": 2,
+    "no-useless-escape": 2,
     "no-void": 2,
     "no-warning-comments": [ 1, {
       "terms": [ "TODO", "FIXME" ],
@@ -167,7 +175,10 @@
     "no-undefined": 2,
     "no-unused-vars": [ 2, {
       "vars": "all",
-      "args": "all"
+      "args": "all",
+      "argsIgnorePattern": "^unused_",
+      "caughtErrors": "all",
+      "caughtErrorsIgnorePattern": "^unused_"
     } ],
     "no-use-before-define": [ 2, "nofunc" ],
     /*********************************/
@@ -240,6 +251,7 @@
     "max-nested-callbacks": [ 2, 3 ],
     "max-params": [ 2, 4 ],
     "max-statements": [ 1, 20 ],
+    "max-statements-per-line": [ 2, { "max": 1 } ],
     "new-cap": [ 2, {
       "newIsCap": true,
       "capIsNew": false
@@ -340,14 +352,17 @@
     } ],
     "no-const-assign": 2,
     "no-dupe-class-members": 2,
+    "no-duplicate-imports": [ 2, { "includeExports": true } ],
     "no-new-symbol": 2,
     "no-restricted-imports": 0,
     "no-this-before-super": 2,
     "no-useless-constructor": 2,
     "no-var": 2,
     "object-shorthand": 2,
-    "prefer-arrow-callback": 2,
-    "prefer-const": 2,
+    "prefer-arrow-callback": [ 2, {
+      "allowNamedFunctions": true
+    } ],
+    "prefer-const": [ 2, { "destructuring": "any" } ],
     "prefer-reflect": 2,
     "prefer-rest-params": 2,
     "prefer-spread": 2,
