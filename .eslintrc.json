@@ -19,6 +19,11 @@
     }
   },
   "settings": {
+    "import/extensions": [
+      ".js",
+      ".jsx"
+    ],
+    "import/ignore": [ "node_modules" ],
     "react": {
       "pragma": "React"
     }
@@ -403,11 +408,30 @@
     "import/no-named-as-default": 2,
     "import/no-named-as-default-member": 2,
     "import/no-deprecated": 2,
+    "import/no-extraneous-dependencies": [ 2, {
+      "devDependencies": false,
+      "optionalDependencies": true
+    } ],
+    "import/no-mutable-exports": 2,
     "import/no-commonjs": 2,
     "import/no-amd": 2,
+    "import/no-nodejs-modules": 0,
     "import/imports-first": [ 2, "absolute-first" ],
     "import/no-duplicates": 2,
     "import/no-namespace": 0,
+    "import/extensions": [ 2, "never" ],
+    "import/order": [ 2, {
+      "groups": [
+        "builtin",
+        "external",
+        "internal",
+        "parent",
+        [ "sibling", "index" ]
+      ],
+      "newlines-between": "always"
+    } ],
+    "import/newline-after-import": 2,
+    "import/prefer-default-export": 2,
     /*********************************/
 
 
