@@ -43,7 +43,8 @@
     "no-extra-boolean-cast": 2,
     "no-extra-parens": [ 2, "all", {
       "conditionalAssign": true,
-      "nestedBinaryExpressions": true
+      "nestedBinaryExpressions": true,
+      "returnAssign": true
     } ],
     "no-extra-semi": 2,
     "no-func-assign": 2,
@@ -56,6 +57,7 @@
     "no-sparse-arrays": 2,
     "no-unexpected-multiline": 2,
     "no-unreachable": 2,
+    "no-unsafe-finally": 2,
     "use-isnan": 2,
     "valid-jsdoc": 2,
     "valid-typeof": 2,
@@ -279,6 +281,9 @@
     "no-unneeded-ternary": 2,
     "no-whitespace-before-property": 2,
     "object-curly-spacing": [ 2, "always" ],
+    "object-property-newline": [ 2, {
+      "allowMultiplePropertiesPerLine": false
+    } ],
     "one-var": [ 2, {
       "uninitialized": "always",
       "initialized": "never"
@@ -356,13 +361,21 @@
     "no-new-symbol": 2,
     "no-restricted-imports": 0,
     "no-this-before-super": 2,
+    "no-useless-computed-key": 2,
     "no-useless-constructor": 2,
     "no-var": 2,
-    "object-shorthand": 2,
-    "prefer-arrow-callback": [ 2, {
-      "allowNamedFunctions": true
+    "object-shorthand": [ 2, "always", {
+      "avoidQuotes": true,
+      "ignoreConstructors": false
     } ],
-    "prefer-const": [ 2, { "destructuring": "any" } ],
+    "prefer-arrow-callback": [ 2, {
+      "allowNamedFunctions": true,
+      "allowUnboundThis": false
+    } ],
+    "prefer-const": [ 2, {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    } ],
     "prefer-reflect": 2,
     "prefer-rest-params": 2,
     "prefer-spread": 2,
