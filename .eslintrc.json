@@ -58,6 +58,7 @@
     "no-irregular-whitespace": 2,
     "no-negated-in-lhs": 2,
     "no-obj-calls": 2,
+    "no-protorype-builtins": 2,
     "no-regex-spaces": 2,
     "no-sparse-arrays": 2,
     "no-unexpected-multiline": 2,
@@ -343,6 +344,7 @@
         "exceptions": []
       }
     } ],
+    "unicode-bom": [ 2, "never" ],
     "wrap-regex": 2,
     /*********************************/
 
@@ -368,6 +370,11 @@
     "no-this-before-super": 2,
     "no-useless-computed-key": 2,
     "no-useless-constructor": 2,
+    "no-useless-rename": [ 2, {
+      "ignoreDestructuring": false,
+      "ignoreImport": false,
+      "ignoreExport": false
+    } ],
     "no-var": 2,
     "object-shorthand": [ 2, "always", {
       "avoidQuotes": true,
