@@ -24,6 +24,17 @@
       ".jsx"
     ],
     "import/ignore": [ "node_modules" ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      },
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    },
     "react": {
       "pragma": "React"
     }
