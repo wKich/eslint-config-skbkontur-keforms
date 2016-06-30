@@ -267,7 +267,8 @@
     } ],
     "max-depth": [ 2, 4 ],
     "max-len": [ 1, 120, 2 ],
-    "max-lines": [ 2, 300, {
+    "max-lines": [ 2, {
+      "max": 300,
       "skipBlankLines": true,
       "skipComments": true
     } ],
@@ -414,7 +415,7 @@
     "prefer-spread": 2,
     "prefer-template": 2,
     "require-yield": 2,
-    "rest-spread-spacing": [ 2, "always" ],
+    "rest-spread-spacing": [ 2, "never" ],
     "sort-imports": [ 2, {
       "ignoreCase": false,
       "ignoreMemberSort": false,

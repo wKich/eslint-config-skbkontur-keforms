@@ -1,5 +1,8 @@
 ## TODO
 
+- Refactor config as node module
+- Add build option
+- Add util for check eslint rules updates
 - Switch to warnings for some no important rules
 - Tune `eslint-plugin-import` rules
 - Refactor rules to use it as node module
