@@ -1,14 +1,14 @@
 ## TODO
 
-- Refactor config as node module
-- Add build option
+- Publish package in npm repository
 - Add util for check eslint rules updates
-- Switch to warnings for some no important rules
 - Tune `eslint-plugin-import` rules
-- Refactor rules to use it as node module
 - Check all rules for `eslint-plugin-babel`
+- Add `eslint-plugin-jsdoc`
+- Add `eslint-plugin-flow`
+- Separate rules pack for custom extending
 
-## How to use
+## How to use (deprecated)
 
 - Run `npm install -g eslint babel-eslint eslint-plugin-babel eslint-plugin-react eslint-plugin-import`
 - Put file `.eslintrc.json` to project directory or home directory

@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-skbkontur-keforms",
+  "version": "0.1.0",
+  "description": "SKB Kontur KEForms eslint config",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -d dist",
+    "test": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wkich/eslint-config-skbkontur-keforms.git"
+  },
+  "keywords": [ "eslint", "config" ],
+  "author": "Dmitry Lazarev <dmitry.lazarev@skbkontur.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wkich/eslint-config-skbkontur-keforms/issues"
+  },
+  "homepage": "https://github.com/wkich/eslint-config-skbkontur-keforms#readme",
+  "dependencies": {
+    "babel-eslint": "^6.1.0",
+    "eslint": "^3.0.1",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^1.10.2",
+    "eslint-plugin-react": "^5.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "rimraf": "^2.5.2"
+  }
+}
