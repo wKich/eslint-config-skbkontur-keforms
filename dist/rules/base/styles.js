@@ -264,7 +264,7 @@ exports.default = {
   // http://eslint.org/docs/rules/object-curly-newline
   'object-curly-newline': ['warn', {
     multiline: true,
-    minProperties: 1
+    minProperties: 2
   }],
 
   // Disallow or enforce spaces inside of curly braces in objects
