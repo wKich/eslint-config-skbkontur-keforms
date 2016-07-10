@@ -66,11 +66,11 @@ module.exports = {
         ]
       },
 
-      'import/docstyle': [ 'jsdoc', 'tomdoc' ],
-
       // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/webpack/README.md
       webpack: { config: 'webpack.config.js' }
     },
+
+    'import/docstyle': [ 'jsdoc', 'tomdoc' ],
 
     react: {
       pragma: 'React',

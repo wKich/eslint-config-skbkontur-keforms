@@ -1,6 +1,6 @@
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /* eslint import/no-commonjs: 'off' */
 
 var _rules = require('./rules');
 
@@ -53,11 +53,11 @@ module.exports = {
         extensions: ['.js', '.jsx']
       },
 
-      'import/docstyle': ['jsdoc', 'tomdoc'],
-
       // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/webpack/README.md
       webpack: { config: 'webpack.config.js' }
     },
+
+    'import/docstyle': ['jsdoc', 'tomdoc'],
 
     react: {
       pragma: 'React',
