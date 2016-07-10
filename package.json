@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-skbkontur-keforms",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "SKB Kontur KEForms eslint config",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/wkich/eslint-config-skbkontur-keforms.git"
   },
-  "keywords": [ "eslint", "config" ],
+  "keywords": [
+    "eslint",
+    "config"
+  ],
   "author": "Dmitry Lazarev <dmitry.lazarev@skbkontur.ru",
   "license": "ISC",
   "bugs": {
@@ -21,6 +24,8 @@
   "dependencies": {
     "babel-eslint": "^6.1.0",
     "eslint": "^3.0.1",
+    "eslint-import-resolver-node": "^0.2.1",
+    "eslint-import-resolver-webpack": "^0.3.2",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^1.10.2",
     "eslint-plugin-react": "^5.2.2"
