@@ -4,6 +4,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _rules = require('./rules');
 
+const ES_VERSION = 7;
+
 module.exports = {
 
   // https://github.com/babel/babel-eslint
@@ -20,7 +22,7 @@ module.exports = {
 
   // http://eslint.org/docs/user-guide/configuring#specifying-parser-options
   parserOptions: {
-    ecmaVersion: 7,
+    ecmaVersion: ES_VERSION,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,

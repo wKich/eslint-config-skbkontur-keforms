@@ -4,8 +4,10 @@ import {
   base,
   babel,
   imports,
-  react
+  react,
 } from './rules'
+
+const ES_VERSION = 7
 
 module.exports = {
 
@@ -16,24 +18,24 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true
+    es6: true,
   },
 
   plugins: [
     'babel',
     'import',
-    'react'
+    'react',
   ],
 
   // http://eslint.org/docs/user-guide/configuring#specifying-parser-options
   parserOptions: {
-    ecmaVersion: 7,
+    ecmaVersion: ES_VERSION,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
       impliedStrict: true,
-      experimentalObjectRestSpread: true
-    }
+      experimentalObjectRestSpread: true,
+    },
   },
 
   settings: {
@@ -42,13 +44,13 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import#importextensions
     'import/extensions': [
       '.js',
-      '.jsx'
+      '.jsx',
     ],
 
     // A list of regex strings that, if matched by a path, will not report the matching module
     // if no exports are found.
     // https://github.com/benmosher/eslint-plugin-import#importignore
-    'import/ignore': [ 'node_modules' ],
+    'import/ignore': ['node_modules'],
 
     // An array of additional modules to consider as "core" modules--modules that should be
     // considered resolved but have no path on the filesystem.
@@ -62,26 +64,26 @@ module.exports = {
       node: {
         extensions: [
           '.js',
-          '.jsx'
-        ]
+          '.jsx',
+        ],
       },
 
       // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/webpack/README.md
-      webpack: { config: 'webpack.config.js' }
+      webpack: { config: 'webpack.config.js' },
     },
 
-    'import/docstyle': [ 'jsdoc', 'tomdoc' ],
+    'import/docstyle': ['jsdoc', 'tomdoc'],
 
     react: {
       pragma: 'React',
-      version: '0.14.8'
-    }
+      version: '0.14.8',
+    },
   },
 
   rules: {
     ...base,
     ...babel,
     ...react,
-    ...imports
-  }
+    ...imports,
+  },
 }

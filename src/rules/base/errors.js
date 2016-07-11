@@ -2,15 +2,15 @@ export default {
 
   // disallow assignment operators in conditional expressions
   // http://eslint.org/docs/rules/no-cond-assign
-  'no-cond-assign': [ 'error', 'always' ],
+  'no-cond-assign': ['error', 'always'],
 
   // disallow the use of `console`
   // http://eslint.org/docs/rules/no-console
-  'no-console': [ 'error' ],
+  'no-console': ['error'],
 
   // disallow constant expressions in conditions
   // http://eslint.org/docs/rules/no-constant-condition
-  'no-constant-condition': [ 'error', { checkLoops: true } ],
+  'no-constant-condition': ['error', { checkLoops: true }],
 
   // disallow control characters in regular expressions
   // http://eslint.org/docs/rules/no-control-regex
@@ -34,7 +34,7 @@ export default {
 
   // disallow empty block statements
   // http://eslint.org/docs/rules/no-empty
-  'no-empty': [ 'error', { allowEmptyCatch: false } ],
+  'no-empty': ['error', { allowEmptyCatch: false }],
 
   // disallow empty character classes in regular expressions
   // http://eslint.org/docs/rules/no-empty-character-class
@@ -50,11 +50,11 @@ export default {
 
   // disallow unnecessary parentheses
   // http://eslint.org/docs/rules/no-extra-parens
-  'no-extra-parens': [ 'error', 'all', {
+  'no-extra-parens': ['error', 'all', {
     conditionalAssign: true,
     nestedBinaryExpressions: true,
-    returnAssign: true
-  } ],
+    returnAssign: true,
+  }],
 
   // disallow unnecessary semicolons
   // http://eslint.org/docs/rules/no-extra-semi
@@ -66,7 +66,7 @@ export default {
 
   // disallow `function` or `var` declarations in nested blocks
   // http://eslint.org/docs/rules/no-inner-declarations
-  'no-inner-declarations': [ 'error', 'both' ],
+  'no-inner-declarations': ['error', 'both'],
 
   // disallow invalid regular expression strings in `RegExp` constructors
   // http://eslint.org/docs/rules/no-invalid-regexp
@@ -74,12 +74,12 @@ export default {
 
   // disallow irregular whitespace outside of strings and comments
   // http://eslint.org/docs/rules/no-irregular-whitespace
-  'no-irregular-whitespace': [ 'error', {
+  'no-irregular-whitespace': ['error', {
     skipStrings: false,
     skipComments: false,
     skipRegExps: false,
-    skipTemplates: false
-  } ],
+    skipTemplates: false,
+  }],
 
   // disallow negating the left operand in `in` expressions
   // http://eslint.org/docs/rules/no-negated-in-lhs
@@ -124,5 +124,5 @@ export default {
 
   // enforce comparing `typeof` expressions against valid strings
   // http://eslint.org/docs/rules/valid-typeof
-  'valid-typeof': 'error'
+  'valid-typeof': 'error',
 }

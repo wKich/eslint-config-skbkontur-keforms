@@ -3,6 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+/* eslint quote-props: 'off' */
+
+const MAX_COMPLEXITY_LEVEL = 10;
+
 exports.default = {
 
   // Enforces getter/setter pairs in objects
@@ -22,7 +26,7 @@ exports.default = {
 
   // Limit Cyclomatic Complexity
   // http://eslint.org/docs/rules/complexity
-  'complexity': ['warn', 10],
+  'complexity': ['warn', MAX_COMPLEXITY_LEVEL],
 
   // require `return` statements to either always or never specify values
   // http://eslint.org/docs/rules/consistent-return

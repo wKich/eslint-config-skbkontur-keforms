@@ -1,11 +1,15 @@
+/* eslint quote-props: 'off' */
+
+const MAX_COMPLEXITY_LEVEL = 10
+
 export default {
 
   // Enforces getter/setter pairs in objects
   // http://eslint.org/docs/rules/accessor-pairs
-  'accessor-pairs': [ 'off', {
+  'accessor-pairs': ['off', {
     setWithoutGet: true,
-    getWithoutSet: false
-  } ],
+    getWithoutSet: false,
+  }],
 
   // Enforces `return` statements in callbacks of array’s methods
   // http://eslint.org/docs/rules/array-callback-return
@@ -17,28 +21,28 @@ export default {
 
   // Limit Cyclomatic Complexity
   // http://eslint.org/docs/rules/complexity
-  'complexity': [ 'warn', 10 ],
+  'complexity': ['warn', MAX_COMPLEXITY_LEVEL],
 
   // require `return` statements to either always or never specify values
   // http://eslint.org/docs/rules/consistent-return
   // TODO Check this 'error' or 'warn'
-  'consistent-return': [ 'error', { treatUndefinedAsUnspecified: false } ],
+  'consistent-return': ['error', { treatUndefinedAsUnspecified: false }],
 
   // Require Following Curly Brace Conventions
   // http://eslint.org/docs/rules/curly
-  'curly': [ 'error', 'multi-line', 'consistent' ],
+  'curly': ['error', 'multi-line', 'consistent'],
 
   // Require `default` Case in `switch` Statements
   // http://eslint.org/docs/rules/default-case
-  'default-case': [ 'error', { commentPattern: '^no\\sdefault$' } ],
+  'default-case': ['error', { commentPattern: '^no\\sdefault$' }],
 
   // Enforce newline before and after dot
   // http://eslint.org/docs/rules/dot-location
-  'dot-location': [ 'error', 'property' ],
+  'dot-location': ['error', 'property'],
 
   // Require Dot Notation
   // http://eslint.org/docs/rules/dot-notation
-  'dot-notation': [ 'error', { allowKeywords: false } ],
+  'dot-notation': ['error', { allowKeywords: false }],
 
   // Require `===` and `!==`
   // Use '===' only with 'true', 'false', '0', '""' or '[]' values
@@ -71,7 +75,7 @@ export default {
 
   // Disallow empty functions
   // http://eslint.org/docs/rules/no-empty-function
-  'no-empty-function': [ 'error', { allow: [] } ],
+  'no-empty-function': ['error', { allow: [] }],
 
   // Disallow empty destructuring patterns
   // http://eslint.org/docs/rules/no-empty-pattern
@@ -83,11 +87,11 @@ export default {
 
   // Disallow `eval()`
   // http://eslint.org/docs/rules/no-eval
-  'no-eval': [ 'error', { allowIndirect: false } ],
+  'no-eval': ['error', { allowIndirect: false }],
 
   // Disallow Extending of Native Objects
   // http://eslint.org/docs/rules/no-extend-native
-  'no-extend-native': [ 'error', { exceptions: [] } ],
+  'no-extend-native': ['error', { exceptions: [] }],
 
   // Disallow unnecessary function binding
   // http://eslint.org/docs/rules/no-extra-bind
@@ -99,7 +103,7 @@ export default {
 
   // Disallow `case` Statement Fallthrough
   // http://eslint.org/docs/rules/no-fallthrough
-  'no-fallthrough': [ 'error', { commentPattern: 'break\\somitted' } ],
+  'no-fallthrough': ['error', { commentPattern: 'break\\somitted' }],
 
   // Disallow Floating Decimals
   // http://eslint.org/docs/rules/no-floating-decimal
@@ -107,7 +111,7 @@ export default {
 
   // Disallow the type conversion with shorter notations
   // http://eslint.org/docs/rules/no-implicit-coercion
-  'no-implicit-coercion': [ 'warn', { allow: [ '~', '!!' ] } ],
+  'no-implicit-coercion': ['warn', { allow: ['~', '!!'] }],
 
   // Disallow `var` and Named Functions in Global Scope
   // http://eslint.org/docs/rules/no-implicit-globals
@@ -128,10 +132,10 @@ export default {
 
   // Disallow Labeled Statements
   // http://eslint.org/docs/rules/no-labels
-  'no-labels': [ 'error', {
+  'no-labels': ['error', {
     allowLoop: false,
-    allowSwitch: false
-  } ],
+    allowSwitch: false,
+  }],
 
   // Disallow Unnecessary Nested Blocks
   // http://eslint.org/docs/rules/no-lone-blocks
@@ -144,16 +148,16 @@ export default {
   // Disallow Magic Numbers
   // http://eslint.org/docs/rules/no-magic-numbers
   // TODO Check this need or not
-  'no-magic-numbers': [ 'warn', {
-    ignore: [ 1 ],
+  'no-magic-numbers': ['warn', {
+    ignore: [1],
     ignoreArrayIndexes: true,
     enforceConst: true,
-    detectObjects: true
-  } ],
+    detectObjects: true,
+  }],
 
   // Disallow multiple spaces
   // http://eslint.org/docs/rules/no-multi-spaces
-  'no-multi-spaces': [ 'error', { exceptions: { Property: false } } ],
+  'no-multi-spaces': ['error', { exceptions: { Property: false } }],
 
   // Disallow Multiline Strings
   // http://eslint.org/docs/rules/no-multi-str
@@ -161,7 +165,7 @@ export default {
 
   // Disallow Reassignment of Native Objects
   // http://eslint.org/docs/rules/no-native-reassign
-  'no-native-reassign': [ 'error', { exceptions: [] } ],
+  'no-native-reassign': ['error', { exceptions: [] }],
 
   // Disallow `new` For Side Effects
   // http://eslint.org/docs/rules/no-new
@@ -186,7 +190,7 @@ export default {
   // Disallow Reassignment of Function Parameters
   // http://eslint.org/docs/rules/no-param-reassign
   // TODO Check how difficult to refactor
-  'no-param-reassign': [ 'error', { props: true } ],
+  'no-param-reassign': ['error', { props: true }],
 
   // Disallow Use of `__proto__`
   // http://eslint.org/docs/rules/no-proto
@@ -194,11 +198,11 @@ export default {
 
   // Disallow Redeclaring Variables
   // http://eslint.org/docs/rules/no-redeclare
-  'no-redeclare': [ 'error', { builtinGlobals: true } ],
+  'no-redeclare': ['error', { builtinGlobals: true }],
 
   // Disallow Assignment in `return` Statement
   // http://eslint.org/docs/rules/no-return-assign
-  'no-return-assign': [ 'error', 'always' ],
+  'no-return-assign': ['error', 'always'],
 
   // Disallow Script URLs
   // http://eslint.org/docs/rules/no-script-url
@@ -226,10 +230,10 @@ export default {
 
   // Disallow Unused Expressions
   // http://eslint.org/docs/rules/no-unused-expressions
-  'no-unused-expressions': [ 'error', {
+  'no-unused-expressions': ['error', {
     allowShortCircuit: false,
-    allowTernary: false
-  } ],
+    allowTernary: false,
+  }],
 
   // Disallow Unused Labels
   // http://eslint.org/docs/rules/no-unused-labels
@@ -253,10 +257,10 @@ export default {
 
   // Disallow Warning Comments
   // http://eslint.org/docs/rules/no-warning-comments
-  'no-warning-comments': [ 'warn', {
-    terms: [ 'TODO', 'FIXME' ],
-    location: 'start'
-  } ],
+  'no-warning-comments': ['warn', {
+    terms: ['TODO', 'FIXME'],
+    location: 'start',
+  }],
 
   // disallow `with` statements
   // http://eslint.org/docs/rules/no-with
@@ -264,7 +268,7 @@ export default {
 
   // Require Radix Parameter
   // http://eslint.org/docs/rules/radix
-  'radix': [ 'error', 'as-needed' ],
+  'radix': ['error', 'as-needed'],
 
   // Require Variable Declarations to be at the top of their scope
   // http://eslint.org/docs/rules/vars-on-top
@@ -272,9 +276,9 @@ export default {
 
   // Require IIFEs to be Wrapped
   // http://eslint.org/docs/rules/wrap-iife
-  'wrap-iife': [ 'error', 'outside' ],
+  'wrap-iife': ['error', 'outside'],
 
   // Require or disallow Yoda Conditions
   // http://eslint.org/docs/rules/yoda
-  'yoda': [ 'error', 'never', { exceptRange: true } ]
+  'yoda': ['error', 'never', { exceptRange: true }],
 }

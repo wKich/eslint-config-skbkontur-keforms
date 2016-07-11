@@ -13,5 +13,5 @@ export default {
   ...variables,
   ...nodejs,
   ...styles,
-  ...es6
+  ...es6,
 }
