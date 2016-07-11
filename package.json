@@ -3,6 +3,9 @@
   "version": "0.1.4",
   "description": "SKB Kontur KEForms eslint config",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=6.x"
+  },
   "scripts": {
     "build": "rimraf dist && babel src -d dist",
     "test": "eslint src"
