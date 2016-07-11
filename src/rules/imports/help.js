@@ -18,12 +18,12 @@ export default {
 
   // Forbid the use of extraneous packages
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
-  'import/no-extraneous-dependencies': [ 'error', {
+  'import/no-extraneous-dependencies': ['error', {
     devDependencies: false,
-    optionalDependencies: false
-  } ],
+    optionalDependencies: false,
+  }],
 
   // Forbid the use of mutable exports with `var` or `let`
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
-  'import/no-mutable-exports': 'error'
+  'import/no-mutable-exports': 'error',
 }

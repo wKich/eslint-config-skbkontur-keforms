@@ -3,6 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+const INDENT_SIZE = 2;
+
 exports.default = {
 
   // Enforce boolean attributes notation in JSX
@@ -27,9 +29,7 @@ exports.default = {
 
   // Restrict file extensions that may contain JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-  'react/jsx-filename-extension': ['error', {
-    extensions: ['.js', '.jsx']
-  }],
+  'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
 
   // Enforce position of the first prop in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
@@ -45,11 +45,11 @@ exports.default = {
 
   // Validate JSX indentation
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
-  'react/jsx-indent': ['warn', 2],
+  'react/jsx-indent': ['warn', INDENT_SIZE],
 
   // Validate props indentation in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
-  'react/jsx-indent-props': ['warn', 2],
+  'react/jsx-indent-props': ['warn', INDENT_SIZE],
 
   // Validate JSX has key prop when in array or iterator
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md

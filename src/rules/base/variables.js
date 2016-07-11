@@ -2,7 +2,7 @@ export default {
 
   // Enforce/Disallow Variable Initializations
   // http://eslint.org/docs/rules/init-declarations
-  'init-declarations': [ 'error', 'always' ],
+  'init-declarations': ['error', 'always'],
 
   // Disallow Shadowing of Variables Inside of `catch`
   // http://eslint.org/docs/rules/no-catch-shadow
@@ -19,15 +19,15 @@ export default {
   // Disallow specific global variables
   // http://eslint.org/docs/rules/no-restricted-globals
   // TODO Check for other variables
-  'no-restricted-globals': [ 'error', 'event' ],
+  'no-restricted-globals': ['error', 'event'],
 
   // Disallow Shadowing
   // http://eslint.org/docs/rules/no-shadow
-  'no-shadow': [ 'error', {
+  'no-shadow': ['error', {
     builtinGlobals: true,
     hoist: 'all',
-    allow: []
-  } ],
+    allow: [],
+  }],
 
   // Disallow Shadowing of Restricted Names
   // http://eslint.org/docs/rules/no-shadow-restricted-names
@@ -35,7 +35,7 @@ export default {
 
   // Disallow Undeclared Variables
   // http://eslint.org/docs/rules/no-undef
-  'no-undef': [ 'error', { typeof: true } ],
+  'no-undef': ['error', { typeof: true }],
 
   // Disallow Initializing to `undefined`
   // http://eslint.org/docs/rules/no-undef-init
@@ -47,18 +47,18 @@ export default {
 
   // Disallow Unused Variables
   // http://eslint.org/docs/rules/no-unused-vars
-  'no-unused-vars': [ 'error', {
+  'no-unused-vars': ['error', {
     vars: 'all',
     args: 'all',
     argsIgnorePattern: '^unused_',
-    caughtErrors: 'all'
-  } ],
+    caughtErrors: 'all',
+  }],
 
   // Disallow Early Use
   // http://eslint.org/docs/rules/no-use-before-define
   // TODO Need for hoist, but all important code always below :(
-  'no-use-before-define': [ 'error', {
+  'no-use-before-define': ['error', {
     functions: true,
-    classes: true
-  } ]
+    classes: true,
+  }],
 }

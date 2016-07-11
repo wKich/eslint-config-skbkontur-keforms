@@ -2,18 +2,18 @@ export default {
 
   // Require braces in arrow function body
   // http://eslint.org/docs/rules/arrow-body-style
-  'arrow-body-style': [ 'error', 'as-needed' ],
+  'arrow-body-style': ['error', 'as-needed'],
 
   // Require parens in arrow function arguments
   // http://eslint.org/docs/rules/arrow-parens
-  'arrow-parens': [ 'warn', 'always' ],
+  'arrow-parens': ['warn', 'always'],
 
   // Require space before/after arrow function’s arrow
   // http://eslint.org/docs/rules/arrow-spacing
-  'arrow-spacing': [ 'warn', {
+  'arrow-spacing': ['warn', {
     before: true,
-    after: true
-  } ],
+    after: true,
+  }],
 
   // Verify calls of `super()` in constructors
   // http://eslint.org/docs/rules/constructor-super
@@ -21,7 +21,7 @@ export default {
 
   // Enforce spacing around the * in generator functions
   // http://eslint.org/docs/rules/generator-star-spacing
-  'generator-star-spacing': [ 'warn', 'after' ],
+  'generator-star-spacing': ['warn', 'after'],
 
   // Disallow modifying variables of class declarations
   // http://eslint.org/docs/rules/no-class-assign
@@ -29,7 +29,7 @@ export default {
 
   // Disallow arrow functions where they could be confused with comparisons
   // http://eslint.org/docs/rules/no-confusing-arrow
-  'no-confusing-arrow': [ 'warn', { allowParens: true } ],
+  'no-confusing-arrow': ['warn', { allowParens: true }],
 
   // Disallow modifying variables that are declared using `const`
   // http://eslint.org/docs/rules/no-const-assign
@@ -41,7 +41,7 @@ export default {
 
   // Disallow duplicate imports
   // http://eslint.org/docs/rules/no-duplicate-imports
-  'no-duplicate-imports': [ 'error', { includeExports: true } ],
+  'no-duplicate-imports': ['error', { includeExports: true }],
 
   // Disallow Symbol Constructor
   // http://eslint.org/docs/rules/no-new-symbol
@@ -65,11 +65,11 @@ export default {
 
   // Disallow renaming import, export, and destructured assignments to the same name
   // http://eslint.org/docs/rules/no-useless-rename
-  'no-useless-rename': [ 'warn', {
+  'no-useless-rename': ['warn', {
     ignoreDestructuring: false,
     ignoreImport: false,
-    ignoreExport: false
-  } ],
+    ignoreExport: false,
+  }],
 
   // require `let` or `const` instead of `var`
   // http://eslint.org/docs/rules/no-var
@@ -77,25 +77,25 @@ export default {
 
   // Require Object Literal Shorthand Syntax
   // http://eslint.org/docs/rules/object-shorthand
-  'object-shorthand': [ 'warn', 'always', {
+  'object-shorthand': ['warn', 'always', {
     avoidQuotes: true,
-    ignoreConstructors: false
-  } ],
+    ignoreConstructors: false,
+  }],
 
   // Suggest using arrow functions as callbacks
   // http://eslint.org/docs/rules/prefer-arrow-callback
   // TODO Check options for this rule
-  'prefer-arrow-callback': [ 'error', {
+  'prefer-arrow-callback': ['error', {
     allowNamedFunctions: false,
-    allowUnboundThis: true
-  } ],
+    allowUnboundThis: true,
+  }],
 
   // Suggest using `const`
   // http://eslint.org/docs/rules/prefer-const
-  'prefer-const': [ 'error', {
+  'prefer-const': ['error', {
     destructuring: 'any',
-    ignoreReadBeforeAssign: false
-  } ],
+    ignoreReadBeforeAssign: false,
+  }],
 
   // Suggest using Reflect methods where applicable
   // http://eslint.org/docs/rules/prefer-reflect
@@ -121,22 +121,22 @@ export default {
 
   // Enforce spacing between rest and spread operators and their expressions
   // http://eslint.org/docs/rules/rest-spread-spacing
-  'rest-spread-spacing': [ 'warn', 'never' ],
+  'rest-spread-spacing': ['warn', 'never'],
 
   // Import Sorting
   // http://eslint.org/docs/rules/sort-imports
   // TODO Enable and check for false positive
-  'sort-imports': [ 'off', {
+  'sort-imports': ['off', {
     ignoreCase: false,
     ignoreMemberSort: false,
-    memberSyntaxSortOrder: [ 'none', 'all', 'single', 'multiple' ]
-  } ],
+    memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+  }],
 
   // Enforce Usage of Spacing in Template Strings
   // http://eslint.org/docs/rules/template-curly-spacing
-  'template-curly-spacing': [ 'warn', 'never' ],
+  'template-curly-spacing': ['warn', 'never'],
 
   // Enforce spacing around the `*` in `yield*` expressions
   // http://eslint.org/docs/rules/yield-star-spacing
-  'yield-star-spacing': [ 'error', 'after' ]
+  'yield-star-spacing': ['error', 'after'],
 }

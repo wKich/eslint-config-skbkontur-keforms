@@ -7,5 +7,5 @@ export default {
   ...statics,
   ...help,
   ...modules,
-  ...style
+  ...style,
 }

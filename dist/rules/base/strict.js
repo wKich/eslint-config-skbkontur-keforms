@@ -3,6 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+/* eslint quote-props: 'off' */
+
 exports.default = {
 
   // require or disallow strict mode directives

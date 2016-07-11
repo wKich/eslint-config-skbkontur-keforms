@@ -2,7 +2,7 @@ export default {
 
   // Enforce `return` After Callback
   // http://eslint.org/docs/rules/callback-return
-  'callback-return': [ 'error', [ 'callback', 'cb', 'done', 'next' ] ],
+  'callback-return': ['error', ['callback', 'cb', 'done', 'next']],
 
   // Enforce `require()` on the top-level module scope
   // http://eslint.org/docs/rules/global-require
@@ -10,14 +10,14 @@ export default {
 
   // Enforce Callback Error Handling
   // http://eslint.org/docs/rules/handle-callback-err
-  'handle-callback-err': [ 'error', '^(err|error)$' ],
+  'handle-callback-err': ['error', '^(err|error)$'],
 
   // Disallow Mixed Requires
   // http://eslint.org/docs/rules/no-mixed-requires
-  'no-mixed-requires': [ 'error', {
+  'no-mixed-requires': ['error', {
     grouping: false,
-    allowCall: false
-  } ],
+    allowCall: false,
+  }],
 
   // Disallow new require
   // http://eslint.org/docs/rules/no-new-require
@@ -41,5 +41,5 @@ export default {
 
   // Disallow Synchronous Methods
   // http://eslint.org/docs/rules/no-sync
-  'no-sync': 'error'
+  'no-sync': 'error',
 }

@@ -1,3 +1,14 @@
+## How to use
+
+- Run `npm install eslint-config-skbkontur-keforms`
+- Extend your local `.eslintrc.json` config:
+  ```
+  {
+    "extends": [ "eslint-config-skbkontur-keforms" ]
+  }
+  ```
+- (Optional) Setup plugins for your favorite code editor
+
 ## TODO
 
 - Publish package in npm repository
@@ -7,9 +18,3 @@
 - Add `eslint-plugin-jsdoc`
 - Add `eslint-plugin-flow`
 - Separate rules pack for custom extending
-
-## How to use (deprecated)
-
-- Run `npm install -g eslint babel-eslint eslint-plugin-babel eslint-plugin-react eslint-plugin-import`
-- Put file `.eslintrc.json` to project directory or home directory
-- (Optional) Setup plugins for your favorite code editor

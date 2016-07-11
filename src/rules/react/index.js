@@ -3,5 +3,5 @@ import jsx from './jsx'
 
 export default {
   ...react,
-  ...jsx
+  ...jsx,
 }

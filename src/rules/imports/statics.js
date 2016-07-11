@@ -2,10 +2,10 @@ export default {
 
   // Ensure imports point to a file/module that can be resolved
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-  'import/no-unresolved': [ 'error', {
+  'import/no-unresolved': ['error', {
     commonjs: true,
-    amd: true
-  } ],
+    amd: true,
+  }],
 
   // Ensure named imports correspond to a named export in the remote file
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
@@ -21,5 +21,5 @@ export default {
 
   // Restrict which files can be imported in a given folder
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
-  'import/no-restricted-paths': 'off'
+  'import/no-restricted-paths': 'off',
 }

@@ -3,6 +3,19 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+/* eslint quote-props: 'off' */
+
+const INDENT_SIZE = 2;
+const MAX_BLOCKS_DEPTH = 4;
+const MAX_CODE_LINE_LENGTH = 120;
+const MAX_CODE_LINES_COUNT = 300;
+const MAX_CALLBACK_DEPTH = 3;
+const MAX_FUNCTION_PARAMS = 4;
+const MAX_FUNCTION_STATEMENTS = 30;
+const CHAIN_SIZE = 2;
+const MAX_EMPTY_LINES = 2;
+const MIN_PROPERTIES_COUNT = 2;
+
 exports.default = {
 
   // Disallow or enforce spaces inside of brackets
@@ -70,9 +83,13 @@ exports.default = {
 
   // enforce consistent indentation
   // http://eslint.org/docs/rules/indent
-  'indent': ['warn', 2, {
+  'indent': ['warn', INDENT_SIZE, {
     SwitchCase: 1,
-    VariableDeclarator: { var: 2, let: 2, const: 3 },
+    VariableDeclarator: {
+      var: INDENT_SIZE,
+      let: INDENT_SIZE,
+      const: INDENT_SIZE + 1
+    },
     outerIIFEBody: 1
   }],
 
@@ -117,13 +134,13 @@ exports.default = {
 
   // enforce a maximum depth that blocks can be nested
   // http://eslint.org/docs/rules/max-depth
-  'max-depth': ['warn', 4],
+  'max-depth': ['warn', MAX_BLOCKS_DEPTH],
 
   // enforce a maximum line length
   // http://eslint.org/docs/rules/max-len
   'max-len': ['warn', {
-    code: 120,
-    tabWidth: 2,
+    code: MAX_CODE_LINE_LENGTH,
+    tabWidth: INDENT_SIZE,
     ignoreComments: false,
     ignoreTrailingComments: false,
     ignoreUrls: false
@@ -132,27 +149,27 @@ exports.default = {
   // enforce a maximum file length
   // http://eslint.org/docs/rules/max-lines
   'max-lines': ['warn', {
-    max: 300,
+    max: MAX_CODE_LINES_COUNT,
     skipBlankLines: true,
     skipComments: true
   }],
 
   // enforce a maximum depth that callbacks can be nested
   // http://eslint.org/docs/rules/max-nested-callbacks
-  'max-nested-callbacks': ['warn', 3],
+  'max-nested-callbacks': ['warn', MAX_CALLBACK_DEPTH],
 
   // enforce a maximum number of parameters in `function` definitions
   // http://eslint.org/docs/rules/max-params
-  'max-params': ['warn', 4],
+  'max-params': ['warn', MAX_FUNCTION_PARAMS],
 
   // enforce a maximum number of statements allowed in `function` blocks
   // http://eslint.org/docs/rules/max-statements
   // TODO Need some statistics
-  'max-statements': ['off', 30],
+  'max-statements': ['off', MAX_FUNCTION_STATEMENTS],
 
   // enforce a maximum number of statements allowed per line
   // http://eslint.org/docs/rules/max-statements-per-line
-  'max-statements-per-line': ['warn', { 'max': 1 }],
+  'max-statements-per-line': ['warn', { max: 1 }],
 
   // require constructor `function` names to begin with a capital letter
   // http://eslint.org/docs/rules/new-cap
@@ -176,7 +193,7 @@ exports.default = {
 
   // require a newline after each call in a method chain
   // http://eslint.org/docs/rules/newline-per-chained-call
-  'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
+  'newline-per-chained-call': ['warn', { ignoreChainWithDepth: CHAIN_SIZE }],
 
   // disallow `Array` constructors
   // http://eslint.org/docs/rules/no-array-constructor
@@ -212,7 +229,7 @@ exports.default = {
   // disallow multiple empty lines
   // http://eslint.org/docs/rules/no-multiple-empty-lines
   'no-multiple-empty-lines': ['warn', {
-    max: 2,
+    max: MAX_EMPTY_LINES,
     maxEOF: 1
   }],
 
@@ -264,7 +281,7 @@ exports.default = {
   // http://eslint.org/docs/rules/object-curly-newline
   'object-curly-newline': ['warn', {
     multiline: true,
-    minProperties: 2
+    minProperties: MIN_PROPERTIES_COUNT
   }],
 
   // Disallow or enforce spaces inside of curly braces in objects

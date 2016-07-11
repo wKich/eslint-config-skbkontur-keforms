@@ -86,9 +86,7 @@ exports.default = {
 
   // Restrict file extensions that may be required
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md
-  'react/require-extension': ['error', {
-    extensions: ['.js', '.jsx']
-  }],
+  'react/require-extension': ['error', { extensions: ['.js', '.jsx'] }],
 
   // Enforce React components to have a shouldComponentUpdate method
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
