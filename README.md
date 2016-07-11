@@ -2,6 +2,7 @@
 
 - Run `npm install eslint-config-skbkontur-keforms`
 - Extend your local `.eslintrc.json` config:
+
   ```
   {
     "extends": [ "eslint-config-skbkontur-keforms" ]
