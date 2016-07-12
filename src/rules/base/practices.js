@@ -149,7 +149,7 @@ export default {
   // http://eslint.org/docs/rules/no-magic-numbers
   // TODO Check this need or not
   'no-magic-numbers': ['warn', {
-    ignore: [1],
+    ignore: [0, 1],
     ignoreArrayIndexes: true,
     enforceConst: true,
     detectObjects: true,

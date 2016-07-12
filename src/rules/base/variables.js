@@ -50,7 +50,7 @@ export default {
   'no-unused-vars': ['error', {
     vars: 'all',
     args: 'all',
-    argsIgnorePattern: '^unused_',
+    argsIgnorePattern: '^_',
     caughtErrors: 'all',
   }],
 
