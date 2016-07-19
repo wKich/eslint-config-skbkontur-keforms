@@ -25,7 +25,8 @@ exports.default = {
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
   'import/no-extraneous-dependencies': ['error', {
     devDependencies: false,
-    optionalDependencies: false
+    optionalDependencies: false,
+    peerDependencies: true
   }],
 
   // Forbid the use of mutable exports with `var` or `let`

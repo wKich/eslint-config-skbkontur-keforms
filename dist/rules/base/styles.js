@@ -171,6 +171,11 @@ exports.default = {
   // http://eslint.org/docs/rules/max-statements-per-line
   'max-statements-per-line': ['warn', { max: 1 }],
 
+  // Enforce newlines between operands of ternary expressions
+  // http://eslint.org/docs/rules/multiline-ternary
+  // TODO Need some statistics
+  'multiline-ternary': 'off',
+
   // require constructor `function` names to begin with a capital letter
   // http://eslint.org/docs/rules/new-cap
   'new-cap': ['warn', {
@@ -377,7 +382,10 @@ exports.default = {
   // http://eslint.org/docs/rules/spaced-comment
   'spaced-comment': ['warn', 'always', {
     line: { exceptions: ['-'] },
-    block: { exceptions: ['*'] }
+    block: {
+      balanced: true,
+      exceptions: ['*']
+    }
   }],
 
   // Require or disallow the Unicode Byte Order Mark (BOM)

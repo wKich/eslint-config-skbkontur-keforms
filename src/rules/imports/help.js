@@ -21,6 +21,7 @@ export default {
   'import/no-extraneous-dependencies': ['error', {
     devDependencies: false,
     optionalDependencies: false,
+    peerDependencies: true,
   }],
 
   // Forbid the use of mutable exports with `var` or `let`
