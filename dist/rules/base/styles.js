@@ -262,6 +262,10 @@ exports.default = {
   // http://eslint.org/docs/rules/no-spaced-func
   'no-spaced-func': 'error',
 
+  // Disallow tabs in file
+  // http://eslint.org/docs/rules/no-tabs
+  'no-tabs': 'error',
+
   // disallow ternary operators
   // http://eslint.org/docs/rules/no-ternary
   'no-ternary': 'off',

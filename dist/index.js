@@ -47,6 +47,11 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import#importcore-modules
     'import/core-modules': [],
 
+    // An array of folders. Resolved modules only from those folders will be considered as "external".
+    // By default - ["node_modules"].
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/README.md#importexternal-module-folders
+    'import/external-module-folders': ['node_modules'],
+
     // https://github.com/benmosher/eslint-plugin-import#resolvers
     'import/resolver': {
 
