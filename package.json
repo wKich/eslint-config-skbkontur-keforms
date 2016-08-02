@@ -18,7 +18,7 @@
     "eslint",
     "config"
   ],
-  "author": "Dmitry Lazarev <dmitry.lazarev@skbkontur.ru",
+  "author": "Dmitry Lazarev <dmitry.lazarev@skbkontur.ru>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wkich/eslint-config-skbkontur-keforms/issues"
@@ -31,7 +31,7 @@
     "eslint-import-resolver-webpack": "^0.4.0",
     "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-import": "^1.10.2",
-    "eslint-plugin-react": "^5.2.2",
+    "eslint-plugin-react": "^6.0.0",
     "eslint_d": "^4.0.0"
   },
   "devDependencies": {

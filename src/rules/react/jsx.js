@@ -62,6 +62,10 @@ export default {
     allowBind: false,
   }],
 
+  // Prevent comments from being inserted as text nodes
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
+  'react/jsx-no-comment-textnodes': 'error',
+
   // Prevent duplicate props in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
   'react/jsx-no-duplicate-props': ['error', { ignoreCase: false }],
@@ -88,6 +92,7 @@ export default {
     callbacksLast: true,
     ignoreCase: false,
     shorthandFirst: true,
+    shorthandLast: false,
   }],
 
   // Validate spacing before closing bracket in JSX
@@ -101,4 +106,12 @@ export default {
   // Prevent variables used in JSX to be incorrectly marked as unused
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
   'react/jsx-uses-vars': 'error',
+
+  // Prevent missing parentheses around multilines JSX
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
+  'react/jsx-wrap-multilines': ['warn', {
+    declaration: true,
+    assignment: true,
+    return: true,
+  }],
 }

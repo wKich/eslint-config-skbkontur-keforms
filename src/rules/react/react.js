@@ -14,10 +14,6 @@ export default {
     ],
   }],
 
-  // Prevent comments from being inserted as text nodes
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-comment-textnodes.md
-  'react/no-comment-textnodes': 'error',
-
   // Prevent usage of dangerous JSX properties
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
   'react/no-danger': 'error',
@@ -28,15 +24,19 @@ export default {
 
   // Prevent usage of `setState` in `componentDidMount`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
-  'react/no-did-mount-set-state': ['error', 'allow-in-func'],
+  'react/no-did-mount-set-state': 'error',
 
   // Prevent usage of `setState` in `componentDidUpdate`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
-  'react/no-did-update-set-state': ['error', 'allow-in-func'],
+  'react/no-did-update-set-state': 'error',
 
   // Prevent direct mutation of `this.state`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
   'react/no-direct-mutation-state': 'error',
+
+  // Prevent usage of `findDOMNode`
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
+  'react/no-find-dom-node': 'error',
 
   // Prevent usage of `isMounted`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
@@ -83,14 +83,10 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
   'react/react-in-jsx-scope': 'error',
 
-  // Restrict file extensions that may be required
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md
-  'react/require-extension': ['error', { extensions: ['.js', '.jsx'] }],
-
   // Enforce React components to have a shouldComponentUpdate method
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
   // TODO Do we need use this
-  'react/require-optimization': 'warn',
+  'react/require-optimization': ['warn', { allowDecorators: [] }],
 
   // Enforce ES5 or ES6 class for returning value in render function
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
@@ -148,13 +144,5 @@ export default {
     callbacksLast: true,
     ignoreCase: false,
     requiredFirst: true,
-  }],
-
-  // Prevent missing parentheses around multilines JSX
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
-  'react/wrap-multilines': ['warn', {
-    declaration: true,
-    assignment: true,
-    return: true,
   }],
 }
