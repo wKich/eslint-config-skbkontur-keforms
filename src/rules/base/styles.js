@@ -261,11 +261,11 @@ export default {
 
   // disallow spacing between `function` identifiers and their applications
   // http://eslint.org/docs/rules/no-spaced-func
-  'no-spaced-func': 'error',
+  'no-spaced-func': 'warn',
 
   // Disallow tabs in file
   // http://eslint.org/docs/rules/no-tabs
-  'no-tabs': 'error',
+  'no-tabs': 'warn',
 
   // disallow ternary operators
   // http://eslint.org/docs/rules/no-ternary
@@ -277,7 +277,7 @@ export default {
 
   // disallow dangling underscores in identifiers
   // http://eslint.org/docs/rules/no-underscore-dangle
-  'no-underscore-dangle': ['warn', { allowAfterThis: false }],
+  'no-underscore-dangle': ['warn', { allowAfterThis: true }],
 
   // disallow ternary operators when simpler alternatives exist
   // http://eslint.org/docs/rules/no-unneeded-ternary
@@ -285,7 +285,7 @@ export default {
 
   // disallow whitespace before properties
   // http://eslint.org/docs/rules/no-whitespace-before-property
-  'no-whitespace-before-property': 'error',
+  'no-whitespace-before-property': 'warn',
 
   // enforce consistent line breaks inside braces
   // http://eslint.org/docs/rules/object-curly-newline
@@ -374,7 +374,7 @@ export default {
 
   // Require Spaces Around Infix Operators
   // http://eslint.org/docs/rules/space-infix-ops
-  'space-infix-ops': 'error',
+  'space-infix-ops': 'warn',
 
   // Require or disallow spaces before/after unary operators
   // http://eslint.org/docs/rules/space-unary-ops
