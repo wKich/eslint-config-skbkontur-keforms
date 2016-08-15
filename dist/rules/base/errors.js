@@ -86,10 +86,6 @@ exports.default = {
     skipTemplates: false
   }],
 
-  // disallow negating the left operand in `in` expressions
-  // http://eslint.org/docs/rules/no-negated-in-lhs
-  'no-negated-in-lhs': 'error',
-
   // disallow calling global object properties as functions
   // http://eslint.org/docs/rules/no-obj-calls
   'no-obj-calls': 'error',
@@ -106,6 +102,10 @@ exports.default = {
   // http://eslint.org/docs/rules/no-sparse-arrays
   'no-sparse-arrays': 'error',
 
+  // Disallow template literal placeholder syntax in regular strings
+  // http://eslint.org/docs/rules/no-template-curly-in-string
+  'no-template-curly-in-string': 'error',
+
   // disallow confusing multiline expressions
   // http://eslint.org/docs/rules/no-unexpected-multiline
   'no-unexpected-multiline': 'error',
@@ -117,6 +117,10 @@ exports.default = {
   // disallow control flow statements in `finally` blocks
   // http://eslint.org/docs/rules/no-unsafe-finally
   'no-unsafe-finally': 'error',
+
+  // disallow negating the left operand of relational operators
+  // http://eslint.org/docs/rules/no-unsafe-negation
+  'no-unsafe-negation': 'error',
 
   // require calls to `isNaN()` when checking for `NaN`
   // http://eslint.org/docs/rules/use-isnan

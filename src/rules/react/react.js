@@ -4,6 +4,10 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
   'react/display-name': ['warn', { ignoreTranspilerName: false }],
 
+  // Forbid certain props on Components
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
+  'react/forbid-component-props': ['off', { forbid: [] }],
+
   // Forbid certain propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
   'react/forbid-prop-types': ['warn', {
@@ -17,6 +21,10 @@ export default {
   // Prevent usage of dangerous JSX properties
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
   'react/no-danger': 'error',
+
+  // Prevent problem with children and props.dangerouslySetInnerHTML
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
+  'react/no-danger-with-children': 'error',
 
   // Prevent usage of deprecated methods
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md

@@ -56,6 +56,10 @@ export default {
   // http://eslint.org/docs/rules/eol-last
   'eol-last': 'error',
 
+  // require or disallow spacing between `function` identifiers and their invocations
+  // http://eslint.org/docs/rules/func-call-spacing
+  'func-call-spacing': ['warn', 'never'],
+
   // Require or disallow named `function` expressions
   // http://eslint.org/docs/rules/func-names
   'func-names': ['error', 'always'],
@@ -259,10 +263,6 @@ export default {
   // http://eslint.org/docs/rules/no-restricted-syntax
   'no-restricted-syntax': 'off',
 
-  // disallow spacing between `function` identifiers and their applications
-  // http://eslint.org/docs/rules/no-spaced-func
-  'no-spaced-func': 'warn',
-
   // Disallow tabs in file
   // http://eslint.org/docs/rules/no-tabs
   'no-tabs': 'warn',
@@ -353,8 +353,17 @@ export default {
     after: true,
   }],
 
+  // requires object keys to be sorted
+  // http://eslint.org/docs/rules/sort-keys
+  // TODO Check if need or not
+  'sort-keys': ['off', 'asc', {
+    caseSensitive: true,
+    natural: true,
+  }],
+
   // Variable Sorting
   // http://eslint.org/docs/rules/sort-vars
+  // TODO Check if need or not
   'sort-vars': 'off',
 
   // Require Or Disallow Space Before Blocks

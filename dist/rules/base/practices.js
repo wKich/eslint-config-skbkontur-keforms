@@ -114,6 +114,10 @@ exports.default = {
   // http://eslint.org/docs/rules/no-floating-decimal
   'no-floating-decimal': 'error',
 
+  // Disallow assignment to native objects or read-only global variables
+  // http://eslint.org/docs/rules/no-global-assign
+  'no-global-assign': ['error', { exceptions: [] }],
+
   // Disallow the type conversion with shorter notations
   // http://eslint.org/docs/rules/no-implicit-coercion
   'no-implicit-coercion': ['warn', { allow: ['~', '!!'] }],
@@ -168,10 +172,6 @@ exports.default = {
   // http://eslint.org/docs/rules/no-multi-str
   'no-multi-str': 'error',
 
-  // Disallow Reassignment of Native Objects
-  // http://eslint.org/docs/rules/no-native-reassign
-  'no-native-reassign': ['error', { exceptions: [] }],
-
   // Disallow `new` For Side Effects
   // http://eslint.org/docs/rules/no-new
   'no-new': 'error',
@@ -215,7 +215,7 @@ exports.default = {
 
   // Disallow Self Assignment
   // http://eslint.org/docs/rules/no-self-assign
-  'no-self-assign': 'error',
+  'no-self-assign': ['error', { props: true }],
 
   // Disallow Self Compare
   // http://eslint.org/docs/rules/no-self-compare

@@ -22,7 +22,7 @@ exports.default = {
 
   // Ensure imported namespaces contain dereferenced properties as they are dereferenced
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
-  'import/namespace': 'error',
+  'import/namespace': ['error', { allowComputed: false }],
 
   // Restrict which files can be imported in a given folder
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
