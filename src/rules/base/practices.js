@@ -42,7 +42,7 @@ export default {
 
   // Require Dot Notation
   // http://eslint.org/docs/rules/dot-notation
-  'dot-notation': ['error', { allowKeywords: false }],
+  'dot-notation': ['error', { allowKeywords: true }],
 
   // Require `===` and `!==`
   // Use '===' only with 'true', 'false', '0', '""' or '[]' values
