@@ -7,8 +7,6 @@ import {
   react,
 } from './rules'
 
-const ES_VERSION = 7
-
 module.exports = {
 
   // https://github.com/babel/babel-eslint
@@ -29,7 +27,7 @@ module.exports = {
 
   // http://eslint.org/docs/user-guide/configuring#specifying-parser-options
   parserOptions: {
-    ecmaVersion: ES_VERSION,
+    ecmaVersion: 2016,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,

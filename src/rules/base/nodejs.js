@@ -39,6 +39,11 @@ export default {
   // http://eslint.org/docs/rules/no-restricted-modules
   'no-restricted-modules': 'off',
 
+  // Disallow certain object properties
+  // http://eslint.org/docs/rules/no-restricted-properties
+  // TODO Add list of restricted properties
+  'no-restricted-properties': 'error',
+
   // Disallow Synchronous Methods
   // http://eslint.org/docs/rules/no-sync
   'no-sync': 'error',

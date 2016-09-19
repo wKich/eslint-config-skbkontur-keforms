@@ -26,5 +26,9 @@ exports.default = {
 
   // Restrict which files can be imported in a given folder
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
-  'import/no-restricted-paths': 'off'
+  'import/no-restricted-paths': 'off',
+
+  // Forbid import of modules using absolute paths
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
+  'import/no-absolute-path': 'error'
 };

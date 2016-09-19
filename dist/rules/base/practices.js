@@ -24,6 +24,10 @@ exports.default = {
   // http://eslint.org/docs/rules/block-scoped-var
   'block-scoped-var': 'error',
 
+  // Enforce that class methods utilize `this`
+  // http://eslint.org/docs/rules/class-methods-use-this
+  'class-methods-use-this': 'error',
+
   // Limit Cyclomatic Complexity
   // http://eslint.org/docs/rules/complexity
   'complexity': ['warn', MAX_COMPLEXITY_LEVEL],
@@ -161,7 +165,7 @@ exports.default = {
     ignore: [0, 1],
     ignoreArrayIndexes: true,
     enforceConst: true,
-    detectObjects: true
+    detectObjects: false
   }],
 
   // Disallow multiple spaces

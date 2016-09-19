@@ -25,20 +25,20 @@
   },
   "homepage": "https://github.com/wkich/eslint-config-skbkontur-keforms#readme",
   "dependencies": {
-    "babel-eslint": "^6.1.0",
-    "eslint": "~3.3.0",
-    "eslint-import-resolver-node": "^0.2.1",
-    "eslint-import-resolver-webpack": "^0.5.1",
+    "babel-eslint": "^6.1.2",
+    "eslint": "~3.5.0",
+    "eslint-import-resolver-node": "^0.2.3",
+    "eslint-import-resolver-webpack": "^0.6.0",
     "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-import": "^1.10.2",
-    "eslint-plugin-react": "^6.0.0",
-    "eslint_d": "^4.0.0"
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-react": "^6.2.2",
+    "eslint_d": "^4.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-cli": "^6.14.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.14.0",
     "babel-plugin-transform-export-extensions": "^6.8.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "rimraf": "^2.5.2"
+    "rimraf": "^2.5.4"
   }
 }

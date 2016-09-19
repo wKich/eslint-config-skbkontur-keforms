@@ -73,13 +73,20 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
   'react/no-unknown-property': 'error',
 
+  // Prevent definitions of unused prop types
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
+  'react/no-unused-prop-types': ['error', {
+    customValidators: [],
+    skipShapeProps: false
+  }],
+
   // Enforce ES5 or ES6 class for React Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
   'react/prefer-es6-class': ['off', 'always'],
 
   // Enforce stateless React Components to be written as a pure function
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-  'react/prefer-stateless-function': 'error',
+  'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
 
   // Prevent missing props validation in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -111,7 +118,7 @@ exports.default = {
   // Enforce component methods order
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
   'react/sort-comp': ['warn', {
-    order: ['static-methods', 'lifecycle', 'everything-else', '/^on.+$/', 'rendering'],
+    order: ['type-annotations', 'static-methods', 'lifecycle', 'everything-else', '/^on.+$/', 'rendering'],
     groups: {
       rendering: ['/^render.+$/', 'render'],
       lifecycle: ['displayName', 'propTypes', 'contextTypes', 'childContextTypes', 'mixins', 'statics', 'defaultProps', 'constructor', 'getDefaultProps', 'getInitialState', 'state', 'getChildContext', 'componentWillMount', 'componentDidMount', 'componentWillReceiveProps', 'shouldComponentUpdate', 'componentWillUpdate', 'componentDidUpdate', 'componentWillUnmount']
@@ -124,5 +131,9 @@ exports.default = {
     callbacksLast: true,
     ignoreCase: false,
     requiredFirst: true
-  }]
+  }],
+
+  // Enforce style prop value being an object
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
+  'react/style-prop-object': 'error'
 };

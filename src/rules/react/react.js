@@ -72,13 +72,20 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
   'react/no-unknown-property': 'error',
 
+  // Prevent definitions of unused prop types
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
+  'react/no-unused-prop-types': ['error', {
+    customValidators: [],
+    skipShapeProps: false,
+  }],
+
   // Enforce ES5 or ES6 class for React Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
   'react/prefer-es6-class': ['off', 'always'],
 
   // Enforce stateless React Components to be written as a pure function
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-  'react/prefer-stateless-function': 'error',
+  'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
 
   // Prevent missing props validation in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -111,6 +118,7 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
   'react/sort-comp': ['warn', {
     order: [
+      'type-annotations',
       'static-methods',
       'lifecycle',
       'everything-else',
@@ -153,4 +161,8 @@ export default {
     ignoreCase: false,
     requiredFirst: true,
   }],
+
+  // Enforce style prop value being an object
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
+  'react/style-prop-object': 'error',
 }

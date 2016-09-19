@@ -36,4 +36,8 @@ export default {
   // Prefer a default export if module exports a single name
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
   'import/prefer-default-export': 'error',
+
+  // Limit the maximum number of dependencies a module can have
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
+  'import/max-dependencies': ['warn', { max: 10 }],
 }

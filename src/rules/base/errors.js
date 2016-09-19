@@ -128,5 +128,5 @@ export default {
 
   // enforce comparing `typeof` expressions against valid strings
   // http://eslint.org/docs/rules/valid-typeof
-  'valid-typeof': 'error',
+  'valid-typeof': ['error', { requireStringLiterals: true }],
 }

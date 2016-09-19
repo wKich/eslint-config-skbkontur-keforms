@@ -2,14 +2,9 @@
 
 const INDENT_SIZE = 2
 const MAX_BLOCKS_DEPTH = 4
-const MAX_CODE_LINE_LENGTH = 120
-const MAX_CODE_LINES_COUNT = 300
 const MAX_CALLBACK_DEPTH = 3
 const MAX_FUNCTION_PARAMS = 4
 const MAX_FUNCTION_STATEMENTS = 30
-const CHAIN_SIZE = 2
-const MAX_EMPTY_LINES = 2
-const MIN_PROPERTIES_COUNT = 2
 
 export default {
 
@@ -90,6 +85,15 @@ export default {
       const: INDENT_SIZE + 1,
     },
     outerIIFEBody: 1,
+    MemberExpression: 1,
+    FunctionDeclaration: {
+      parameters: 'first',
+      body: 1,
+    },
+    FunctionExpression: {
+      parameters: 'first',
+      body: 1,
+    },
   }],
 
   // enforce the consistent use of either double or single quotes in JSX attributes
@@ -111,6 +115,10 @@ export default {
     after: true,
   }],
 
+  // enforce position of line comments
+  // http://eslint.org/docs/rules/line-comment-position
+  'line-comment-position': ['error', { position: 'above' }],
+
   // enforce consistent linebreak style
   // http://eslint.org/docs/rules/linebreak-style
   // TODO How to check this in windows?
@@ -131,6 +139,13 @@ export default {
     allowArrayEnd: false,
   }],
 
+  // require or disallow newlines around directives
+  // http://eslint.org/docs/rules/lines-around-directive
+  'lines-around-directive': ['error', {
+    before: 'never',
+    after: 'always',
+  }],
+
   // enforce a maximum depth that blocks can be nested
   // http://eslint.org/docs/rules/max-depth
   'max-depth': ['warn', MAX_BLOCKS_DEPTH],
@@ -138,17 +153,19 @@ export default {
   // enforce a maximum line length
   // http://eslint.org/docs/rules/max-len
   'max-len': ['warn', {
-    code: MAX_CODE_LINE_LENGTH,
+    code: 120,
     tabWidth: INDENT_SIZE,
     ignoreComments: false,
     ignoreTrailingComments: false,
     ignoreUrls: false,
+    ignoreStrings: false,
+    ignoreTemplateLiterals: false,
   }],
 
   // enforce a maximum file length
   // http://eslint.org/docs/rules/max-lines
   'max-lines': ['warn', {
-    max: MAX_CODE_LINES_COUNT,
+    max: 300,
     skipBlankLines: true,
     skipComments: true,
   }],
@@ -170,10 +187,10 @@ export default {
   // http://eslint.org/docs/rules/max-statements-per-line
   'max-statements-per-line': ['warn', { max: 1 }],
 
-  // Enforce newlines between operands of ternary expressions
+  // Enforce or disallow newlines between operands of ternary expressions
   // http://eslint.org/docs/rules/multiline-ternary
   // TODO Need some statistics
-  'multiline-ternary': 'off',
+  'multiline-ternary': ['off', 'always'],
 
   // require constructor `function` names to begin with a capital letter
   // http://eslint.org/docs/rules/new-cap
@@ -197,7 +214,7 @@ export default {
 
   // require a newline after each call in a method chain
   // http://eslint.org/docs/rules/newline-per-chained-call
-  'newline-per-chained-call': ['warn', { ignoreChainWithDepth: CHAIN_SIZE }],
+  'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
 
   // disallow `Array` constructors
   // http://eslint.org/docs/rules/no-array-constructor
@@ -239,7 +256,7 @@ export default {
   // disallow multiple empty lines
   // http://eslint.org/docs/rules/no-multiple-empty-lines
   'no-multiple-empty-lines': ['warn', {
-    max: MAX_EMPTY_LINES,
+    max: 2,
     maxEOF: 1,
   }],
 
@@ -261,7 +278,8 @@ export default {
 
   // disallow specified syntax
   // http://eslint.org/docs/rules/no-restricted-syntax
-  'no-restricted-syntax': 'off',
+  // TODO Add restricted statements
+  'no-restricted-syntax': ['error', 'WithStatement'],
 
   // Disallow tabs in file
   // http://eslint.org/docs/rules/no-tabs
@@ -291,7 +309,7 @@ export default {
   // http://eslint.org/docs/rules/object-curly-newline
   'object-curly-newline': ['warn', {
     multiline: true,
-    minProperties: MIN_PROPERTIES_COUNT,
+    minProperties: 2,
   }],
 
   // Disallow or enforce spaces inside of curly braces in objects

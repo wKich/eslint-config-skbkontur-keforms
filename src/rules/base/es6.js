@@ -97,6 +97,10 @@ export default {
     ignoreReadBeforeAssign: false,
   }],
 
+  // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
+  // http://eslint.org/docs/rules/prefer-numeric-literals
+  'prefer-numeric-literals': 'error',
+
   // Suggest using Reflect methods where applicable
   // http://eslint.org/docs/rules/prefer-reflect
   // TODO Check if need or not
@@ -131,6 +135,10 @@ export default {
     ignoreMemberSort: false,
     memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
   }],
+
+  // require symbol descriptions
+  // http://eslint.org/docs/rules/symbol-description
+  'symbol-description': 'error',
 
   // Enforce Usage of Spacing in Template Strings
   // http://eslint.org/docs/rules/template-curly-spacing
