@@ -1,3 +1,4 @@
 {
-  "extends": [ "./dist/index.js" ]
+  "extends": [ "./dist/index.js" ],
+  "settings": { "flowtype": { "onlyFilesWithFlowAnnotation": true } }
 }

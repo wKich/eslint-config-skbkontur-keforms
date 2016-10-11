@@ -16,7 +16,7 @@ module.exports = {
     es6: true
   },
 
-  plugins: ['babel', 'import', 'react'],
+  plugins: ['babel', 'flowtype', 'import', 'react'],
 
   // http://eslint.org/docs/user-guide/configuring#specifying-parser-options
   parserOptions: {
@@ -30,6 +30,10 @@ module.exports = {
   },
 
   settings: {
+
+    // When true, only checks files with a @flow annotation in the first comment.
+    // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-settings-onlyfileswithflowannotation
+    flowtype: { onlyFilesWithFlowAnnotation: false },
 
     // A whitelist of file extensions that will be parsed as modules and inspected for exports.
     // https://github.com/benmosher/eslint-plugin-import#importextensions
@@ -70,5 +74,5 @@ module.exports = {
     }
   },
 
-  rules: _extends({}, _rules.base, _rules.babel, _rules.react, _rules.imports)
+  rules: _extends({}, _rules.base, _rules.babel, _rules.flow, _rules.react, _rules.imports)
 };

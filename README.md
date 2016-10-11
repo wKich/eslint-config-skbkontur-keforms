@@ -17,5 +17,5 @@
 - [ ] Tune `eslint-plugin-import` rules
 - [ ] Check all rules for `eslint-plugin-babel`
 - [ ] Add `eslint-plugin-jsdoc`
-- [ ] Add `eslint-plugin-flow`
+- [x] Add `eslint-plugin-flowtype`
 - [ ] Separate rules pack for custom extending

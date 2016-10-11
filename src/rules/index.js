@@ -1,4 +1,5 @@
 export base from './base'
 export babel from './babel'
+export flow from './flow'
 export imports from './imports'
 export react from './react'

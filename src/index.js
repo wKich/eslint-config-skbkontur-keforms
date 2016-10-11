@@ -3,6 +3,7 @@
 import {
   base,
   babel,
+  flow,
   imports,
   react,
 } from './rules'
@@ -21,6 +22,7 @@ module.exports = {
 
   plugins: [
     'babel',
+    'flowtype',
     'import',
     'react',
   ],
@@ -37,6 +39,10 @@ module.exports = {
   },
 
   settings: {
+
+    // When true, only checks files with a @flow annotation in the first comment.
+    // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-settings-onlyfileswithflowannotation
+    flowtype: { onlyFilesWithFlowAnnotation: false },
 
     // A whitelist of file extensions that will be parsed as modules and inspected for exports.
     // https://github.com/benmosher/eslint-plugin-import#importextensions
@@ -86,6 +92,7 @@ module.exports = {
   rules: {
     ...base,
     ...babel,
+    ...flow,
     ...react,
     ...imports,
   },
