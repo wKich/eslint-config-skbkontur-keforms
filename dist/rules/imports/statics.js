@@ -38,7 +38,7 @@ exports.default = {
 
   // Prevent importing the submodules of other modules
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
-  'import/no-internal-modules': 'error',
+  'import/no-internal-modules': 'off',
 
   // Forbid Webpack loader syntax in imports
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
