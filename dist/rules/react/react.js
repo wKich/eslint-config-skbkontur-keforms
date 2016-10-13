@@ -19,6 +19,10 @@ exports.default = {
     forbid: ['any', 'array', 'object']
   }],
 
+  // Prevent passing children as props
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
+  'react/no-children-prop': 'error',
+
   // Prevent usage of dangerous JSX properties
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
   'react/no-danger': 'error',
@@ -69,6 +73,10 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
   'react/no-string-refs': 'error',
 
+  // Prevent invalid characters from appearing in markup
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
+  'react/no-unescaped-entities': 'error',
+
   // Prevent usage of unknown DOM property
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
   'react/no-unknown-property': 'error',
@@ -92,7 +100,8 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
   'react/prop-types': ['warn', {
     ignore: [],
-    customValidators: []
+    customValidators: [],
+    skipUndeclared: false
   }],
 
   // Prevent missing `React` when using JSX

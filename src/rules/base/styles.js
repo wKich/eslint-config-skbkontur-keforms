@@ -49,7 +49,7 @@ export default {
 
   // Require file to end with single newline
   // http://eslint.org/docs/rules/eol-last
-  'eol-last': 'error',
+  'eol-last': ['error', 'always'],
 
   // require or disallow spacing between `function` identifiers and their invocations
   // http://eslint.org/docs/rules/func-call-spacing
@@ -318,7 +318,7 @@ export default {
 
   // enforce placing object properties on separate lines
   // http://eslint.org/docs/rules/object-property-newline
-  'object-property-newline': ['warn', { allowMultiplePropertiesPerLine: false }],
+  'object-property-newline': ['warn', { allowMultiplePropertiesPerLine: true }],
 
   // Require or Disallow One Variable Declaration per Scope
   // http://eslint.org/docs/rules/one-var

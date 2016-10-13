@@ -11,7 +11,7 @@ exports.default = {
 
   // Require parens in arrow function arguments
   // http://eslint.org/docs/rules/arrow-parens
-  'arrow-parens': ['warn', 'always'],
+  'arrow-parens': ['warn', 'as-needed', { requireForBlockBody: true }],
 
   // Require space before/after arrow function’s arrow
   // http://eslint.org/docs/rules/arrow-spacing

@@ -52,7 +52,7 @@ export default {
   // http://eslint.org/docs/rules/no-extra-parens
   'no-extra-parens': ['error', 'all', {
     conditionalAssign: true,
-    nestedBinaryExpressions: true,
+    nestedBinaryExpressions: false,
     returnAssign: true,
   }],
 

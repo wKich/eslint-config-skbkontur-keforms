@@ -1,8 +1,8 @@
 export default {
 
   // Ensure all imports appear before other statements
-  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md
-  'import/imports-first': ['error', 'absolute-first'],
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
+  'import/first': ['error', 'absolute-first'],
 
   // Report repeated import of the same module in multiple places
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
@@ -14,12 +14,15 @@ export default {
 
   // Ensure consistent use of file extension within the import path
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-  // TODO Check this issue https://github.com/benmosher/eslint-plugin-import/issues/390
-  'import/extensions': ['off', 'never'],
+  'import/extensions': ['error', 'always', {
+    js: 'never',
+    jsx: 'never',
+  }],
 
   // Enforce a convention in module import order
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
   'import/order': ['warn', {
+    'newlines-between': 'ignore',
     groups: [
       'builtin',
       'external',
@@ -40,4 +43,8 @@ export default {
   // Limit the maximum number of dependencies a module can have
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
   'import/max-dependencies': ['warn', { max: 10 }],
+
+  // Forbid unassigned imports
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
+  'import/no-unassigned-import': 'error',
 }
