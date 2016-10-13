@@ -35,13 +35,13 @@ exports.default = {
 
   // Requires that all function parameters have type annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-parameter-type
-  'flowtype/require-parameter-type': ['error', { excludeArrowFunctions: false }],
+  'flowtype/require-parameter-type': ['error', { excludeArrowFunctions: 'expressionsOnly' }],
 
   // Requires that functions have return type annotation.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-return-type
   'flowtype/require-return-type': ['error', 'always', {
     annotateUndefined: 'always',
-    excludeArrowFunctions: false
+    excludeArrowFunctions: 'expressionsOnly'
   }],
 
   // This rule validates Flow file annotations.
