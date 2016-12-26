@@ -32,7 +32,7 @@ exports.default = {
   // http://eslint.org/docs/rules/complexity
   'complexity': ['warn', MAX_COMPLEXITY_LEVEL],
 
-  // require `return` statements to either always or never specify values
+  // Require `return` statements to either always or never specify values
   // http://eslint.org/docs/rules/consistent-return
   // TODO Check this 'error' or 'warn'
   'consistent-return': ['error', { treatUndefinedAsUnspecified: false }],
@@ -188,11 +188,11 @@ exports.default = {
   // http://eslint.org/docs/rules/no-new-wrappers
   'no-new-wrappers': 'error',
 
-  // disallow octal literals
+  // Disallow octal literals
   // http://eslint.org/docs/rules/no-octal
   'no-octal': 'error',
 
-  // disallow octal escape sequences in string literals
+  // Disallow octal escape sequences in string literals
   // http://eslint.org/docs/rules/no-octal-escape
   'no-octal-escape': 'error',
 
@@ -279,7 +279,7 @@ exports.default = {
     location: 'start'
   }],
 
-  // disallow `with` statements
+  // Disallow `with` statements
   // http://eslint.org/docs/rules/no-with
   'no-with': 'error',
 

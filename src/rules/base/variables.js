@@ -8,7 +8,7 @@ export default {
   // http://eslint.org/docs/rules/no-catch-shadow
   'no-catch-shadow': 'error',
 
-  // disallow deleting variables
+  // Disallow deleting variables
   // http://eslint.org/docs/rules/no-delete-var
   'no-delete-var': 'error',
 

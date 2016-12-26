@@ -71,7 +71,7 @@ export default {
     ignoreExport: false,
   }],
 
-  // require `let` or `const` instead of `var`
+  // Require `let` or `const` instead of `var`
   // http://eslint.org/docs/rules/no-var
   'no-var': 'error',
 
@@ -136,7 +136,7 @@ export default {
     memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
   }],
 
-  // require symbol descriptions
+  // Require symbol descriptions
   // http://eslint.org/docs/rules/symbol-description
   'symbol-description': 'error',
 
