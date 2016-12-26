@@ -25,6 +25,10 @@ exports.default = {
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-dupe-keys
   'flowtype/no-dupe-keys': 'error',
 
+  // Disallows use of primitive constructors as types, such as `Boolean`, `Number` and `String`.
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-primitive-constructor-types
+  'flowtype/no-primitive-constructor-types': 'error',
+
   // Warns against weak type annotations `any`, `Object` and `Function`.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-weak-types
   'flowtype/no-weak-types': ['error', {
@@ -32,6 +36,10 @@ exports.default = {
     Object: true,
     Function: true
   }],
+
+  // Enforces consistent separators between properties in Flow object types.
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-object-type-delimiter
+  'flowtype/object-type-delimiter': ['error', 'comma'],
 
   // Requires that all function parameters have type annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-parameter-type
@@ -47,6 +55,10 @@ exports.default = {
   // This rule validates Flow file annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-valid-file-annotation
   'flowtype/require-valid-file-annotation': ['error', 'always', { annotationStyle: 'line' }],
+
+  // Requires that all variable declarators have type annotations.
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-variable-type
+  'flowtype/require-variable-type': 'off',
 
   // Enforces consistent use of semicolons after type aliases.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-semi
