@@ -208,6 +208,10 @@ export default {
   // http://eslint.org/docs/rules/no-return-assign
   'no-return-assign': ['error', 'always'],
 
+  // Disallows unnecessary `return await`
+  // http://eslint.org/docs/rules/no-return-await
+  'no-return-await': 'warn',
+
   // Disallow Script URLs
   // http://eslint.org/docs/rules/no-script-url
   'no-script-url': 'error',
@@ -255,6 +259,10 @@ export default {
   // http://eslint.org/docs/rules/no-useless-escape
   'no-useless-escape': 'error',
 
+  // Disallow redundant return statements
+  // http://eslint.org/docs/rules/no-useless-return
+  'no-useless-return': 'warn',
+
   // Disallow use of the `void` operator
   // http://eslint.org/docs/rules/no-void
   'no-void': 'error',
@@ -274,13 +282,17 @@ export default {
   // http://eslint.org/docs/rules/radix
   'radix': ['error', 'as-needed'],
 
+  // Disallow async functions which have no `await` expression
+  // http://eslint.org/docs/rules/require-await
+  'require-await': 'error',
+
   // Require Variable Declarations to be at the top of their scope
   // http://eslint.org/docs/rules/vars-on-top
   'vars-on-top': 'error',
 
   // Require IIFEs to be Wrapped
   // http://eslint.org/docs/rules/wrap-iife
-  'wrap-iife': ['error', 'outside'],
+  'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
 
   // Require or disallow Yoda Conditions
   // http://eslint.org/docs/rules/yoda

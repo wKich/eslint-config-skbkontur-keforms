@@ -5,6 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
 
+  // Disallow `await` inside of loops
+  // http://eslint.org/docs/rules/no-await-in-loop
+  'no-await-in-loop': 'error',
+
   // disallow assignment operators in conditional expressions
   // http://eslint.org/docs/rules/no-cond-assign
   'no-cond-assign': ['error', 'always'],

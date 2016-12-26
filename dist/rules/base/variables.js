@@ -56,7 +56,8 @@ exports.default = {
     vars: 'all',
     args: 'all',
     argsIgnorePattern: '^_',
-    caughtErrors: 'all'
+    caughtErrors: 'all',
+    caughtErrorsIgnorePattern: '^ignore'
   }],
 
   // Disallow Early Use

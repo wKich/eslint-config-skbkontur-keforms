@@ -108,8 +108,8 @@ exports.default = {
 
   // Suggest using Reflect methods where applicable
   // http://eslint.org/docs/rules/prefer-reflect
-  // TODO Check if need or not
-  'prefer-reflect': 'error',
+  // TODO Deprecated
+  'prefer-reflect': 'off',
 
   // Suggest using the rest parameters instead of `arguments`
   // http://eslint.org/docs/rules/prefer-rest-params

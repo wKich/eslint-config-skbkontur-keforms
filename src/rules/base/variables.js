@@ -52,6 +52,7 @@ export default {
     args: 'all',
     argsIgnorePattern: '^_',
     caughtErrors: 'all',
+    caughtErrorsIgnorePattern: '^ignore',
   }],
 
   // Disallow Early Use

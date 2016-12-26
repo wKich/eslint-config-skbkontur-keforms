@@ -29,6 +29,10 @@ exports.default = {
   // http://eslint.org/docs/rules/camelcase
   'camelcase': ['warn', { properties: 'always' }],
 
+  // enforce or disallow capitalization of the first letter of a comment
+  // http://eslint.org/docs/rules/capitalized-comments
+  'capitalized-comments': ['warn', 'always', { ignoreConsecutiveComments: true }],
+
   // require or disallow trailing commas
   // http://eslint.org/docs/rules/comma-dangle
   'comma-dangle': ['warn', 'always-multiline'],
@@ -60,9 +64,13 @@ exports.default = {
   // http://eslint.org/docs/rules/func-call-spacing
   'func-call-spacing': ['warn', 'never'],
 
+  // require function names to match the name of the variable or property to which they are assigned
+  // http://eslint.org/docs/rules/func-name-matching
+  'func-name-matching': ['error', 'always', { includeCommonJSModuleExports: false }],
+
   // Require or disallow named `function` expressions
   // http://eslint.org/docs/rules/func-names
-  'func-names': ['error', 'always'],
+  'func-names': ['warn', 'as-needed'],
 
   // enforce the consistent use of either `function` declarations or expressions
   // http://eslint.org/docs/rules/func-style
@@ -98,7 +106,10 @@ exports.default = {
     FunctionExpression: {
       parameters: 'first',
       body: 1
-    }
+    },
+    CallExpression: { arguments: 'first' },
+    ArrayExpression: 1,
+    ObjectExpression: 1
   }],
 
   // enforce the consistent use of either double or single quotes in JSX attributes
@@ -164,7 +175,8 @@ exports.default = {
     ignoreTrailingComments: false,
     ignoreUrls: false,
     ignoreStrings: false,
-    ignoreTemplateLiterals: false
+    ignoreTemplateLiterals: false,
+    ignoreRegExpLiterals: false
   }],
 
   // enforce a maximum file length
@@ -391,7 +403,8 @@ exports.default = {
   // http://eslint.org/docs/rules/space-before-function-paren
   'space-before-function-paren': ['warn', {
     anonymous: 'always',
-    named: 'never'
+    named: 'never',
+    asyncArrow: 'always'
   }],
 
   // Disallow or enforce spaces inside of parentheses
