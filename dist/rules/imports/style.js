@@ -45,5 +45,9 @@ exports.default = {
 
   // Forbid unassigned imports
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
-  'import/no-unassigned-import': 'error'
+  'import/no-unassigned-import': 'error',
+
+  // Forbid named default exports
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
+  'import/no-named-default': 'error'
 };
