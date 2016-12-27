@@ -19,6 +19,10 @@ exports.default = {
     forbid: ['any', 'array', 'object']
   }],
 
+  // Prevent using Array index in `key` props
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
+  'react/no-array-index-key': 'error',
+
   // Prevent passing children as props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
   'react/no-children-prop': 'error',
@@ -107,6 +111,10 @@ exports.default = {
   // Prevent missing `React` when using JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
   'react/react-in-jsx-scope': 'error',
+
+  // Enforce a defaultProps definition for every prop that is not a required prop
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+  'react/require-default-props': 'error',
 
   // Enforce React components to have a shouldComponentUpdate method
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md

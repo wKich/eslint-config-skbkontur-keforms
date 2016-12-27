@@ -99,6 +99,14 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
   'react/jsx-space-before-closing': ['warn', 'always'],
 
+  // Validate whitespace in and around the JSX opening and closing brackets
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+  'react/jsx-tag-spacing': ['warn', {
+    closingSlash: 'never',
+    beforeSelfClosing: 'always',
+    afterOpening: 'never',
+  }],
+
   // Prevent React to be incorrectly marked as unused
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
   'react/jsx-uses-react': 'error',
