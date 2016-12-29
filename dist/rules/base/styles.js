@@ -206,7 +206,6 @@ exports.default = {
 
   // Enforce or disallow newlines between operands of ternary expressions
   // http://eslint.org/docs/rules/multiline-ternary
-  // TODO Need some statistics
   'multiline-ternary': ['off', 'always'],
 
   // Require constructor `function` names to begin with a capital letter
@@ -361,7 +360,7 @@ exports.default = {
 
   // Require JSDoc comment
   // http://eslint.org/docs/rules/require-jsdoc
-  // TODO This must have
+  // NOTE Don't need this in most cases because we have Flow types
   'require-jsdoc': ['off', {
     require: {
       FunctionDeclaration: true,
@@ -384,7 +383,7 @@ exports.default = {
 
   // Requires object keys to be sorted
   // http://eslint.org/docs/rules/sort-keys
-  // TODO Check if need or not
+  // TODO This is need, but we don't have autofix
   'sort-keys': ['off', 'asc', {
     caseSensitive: true,
     natural: true
@@ -392,7 +391,7 @@ exports.default = {
 
   // Variable Sorting
   // http://eslint.org/docs/rules/sort-vars
-  // TODO Check if need or not
+  // TODO This is need, but we don't have autofix
   'sort-vars': 'off',
 
   // Require Or Disallow Space Before Blocks

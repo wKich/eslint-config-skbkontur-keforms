@@ -2,7 +2,7 @@ export default {
 
   // Report potentially ambiguous parse goal (`script` vs. `module`)
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
-  'import/unambiguous': 'off',
+  'import/unambiguous': 'error',
 
   // Report CommonJS `require` calls and `module.exports` or `exports.*`
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md

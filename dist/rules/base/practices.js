@@ -136,7 +136,7 @@ exports.default = {
 
   // Disallow `this` keywords outside of classes or class-like objects
   // http://eslint.org/docs/rules/no-invalid-this
-  // TODO Temporary disabled by this issue https://github.com/babel/eslint-plugin-babel/issues/12
+  // TODO Using babel/no-invalid-this instead
   'no-invalid-this': 'off',
 
   // Disallow the use of the `__iterator__` property

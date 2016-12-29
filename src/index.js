@@ -1,8 +1,8 @@
 /* eslint import/no-commonjs: 'off' */
 
 import {
-  base,
   babel,
+  base,
   flow,
   imports,
   react,

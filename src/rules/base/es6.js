@@ -129,8 +129,8 @@ export default {
 
   // Import Sorting
   // http://eslint.org/docs/rules/sort-imports
-  // TODO Enable and check for false positive
-  'sort-imports': ['off', {
+  // TODO Not work autofix?
+  'sort-imports': ['warn', {
     ignoreCase: false,
     ignoreMemberSort: false,
     memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],

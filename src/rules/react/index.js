@@ -1,7 +1,7 @@
-import react from './react'
 import jsx from './jsx'
+import react from './react'
 
 export default {
-  ...react,
   ...jsx,
+  ...react,
 }

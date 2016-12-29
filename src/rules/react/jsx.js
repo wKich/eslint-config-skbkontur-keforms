@@ -32,8 +32,7 @@ export default {
 
   // Enforce event handler naming conventions in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
-  // TODO Get some statistics
-  'react/jsx-handler-names': ['off', {
+  'react/jsx-handler-names': ['warn', {
     eventHandlerPrefix: 'handle',
     eventHandlerPropPrefix: 'on',
   }],
@@ -72,7 +71,8 @@ export default {
 
   // Prevent usage of unwrapped JSX strings
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
-  'react/jsx-no-literals': 'off',
+  // TODO For now literals is escaped in dev bundle https://github.com/babel/babel/issues/4909
+  'react/jsx-no-literals': 'warn',
 
   // Prevent usage of unsafe `target='_blank'`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md

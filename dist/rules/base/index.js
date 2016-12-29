@@ -10,6 +10,14 @@ var _errors = require('./errors');
 
 var _errors2 = _interopRequireDefault(_errors);
 
+var _es = require('./es6');
+
+var _es2 = _interopRequireDefault(_es);
+
+var _nodejs = require('./nodejs');
+
+var _nodejs2 = _interopRequireDefault(_nodejs);
+
 var _practices = require('./practices');
 
 var _practices2 = _interopRequireDefault(_practices);
@@ -18,22 +26,14 @@ var _strict = require('./strict');
 
 var _strict2 = _interopRequireDefault(_strict);
 
-var _variables = require('./variables');
-
-var _variables2 = _interopRequireDefault(_variables);
-
-var _nodejs = require('./nodejs');
-
-var _nodejs2 = _interopRequireDefault(_nodejs);
-
 var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _es = require('./es6');
+var _variables = require('./variables');
 
-var _es2 = _interopRequireDefault(_es);
+var _variables2 = _interopRequireDefault(_variables);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _extends({}, _errors2.default, _practices2.default, _strict2.default, _variables2.default, _nodejs2.default, _styles2.default, _es2.default);
+exports.default = _extends({}, _errors2.default, _es2.default, _nodejs2.default, _practices2.default, _strict2.default, _styles2.default, _variables2.default);

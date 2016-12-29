@@ -6,7 +6,7 @@ export default {
 
   // Forbid certain props on Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
-  'react/forbid-component-props': ['off', { forbid: [] }],
+  'react/forbid-component-props': ['warn', { forbid: ['className', 'style'] }],
 
   // Forbid certain propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
@@ -93,7 +93,7 @@ export default {
 
   // Enforce ES5 or ES6 class for React Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
-  'react/prefer-es6-class': ['off', 'always'],
+  'react/prefer-es6-class': ['error', 'always'],
 
   // Enforce stateless React Components to be written as a pure function
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
