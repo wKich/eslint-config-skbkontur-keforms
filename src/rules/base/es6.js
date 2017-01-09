@@ -80,6 +80,7 @@ export default {
   'object-shorthand': ['warn', 'always', {
     avoidQuotes: true,
     ignoreConstructors: false,
+    avoidExplicitReturnArrows: true,
   }],
 
   // Suggest using arrow functions as callbacks
@@ -96,6 +97,13 @@ export default {
     destructuring: 'any',
     ignoreReadBeforeAssign: false,
   }],
+
+  // Prefer destructuring from arrays and objects
+  // http://eslint.org/docs/rules/prefer-destructuring
+  'prefer-destructuring': ['error', {
+    array: true,
+    object: true,
+  }, { enforceForRenamedProperties: true }],
 
   // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
   // http://eslint.org/docs/rules/prefer-numeric-literals

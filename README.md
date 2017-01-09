@@ -15,7 +15,7 @@
 - [x] Publish package in npm repository
 - [ ] Add util for check eslint rules updates
 - [ ] Tune `eslint-plugin-import` rules
-- [ ] Check all rules for `eslint-plugin-babel`
+- [x] Check all rules for `eslint-plugin-babel`
 - [ ] Add `eslint-plugin-jsdoc`
 - [x] Add `eslint-plugin-flowtype`
 - [ ] Separate rules pack for custom extending
