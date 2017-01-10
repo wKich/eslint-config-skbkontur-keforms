@@ -58,7 +58,7 @@ exports.default = {
 
   // Require file to end with single newline
   // http://eslint.org/docs/rules/eol-last
-  'eol-last': ['error', 'always'],
+  'eol-last': ['warn', 'always'],
 
   // Require or disallow spacing between `function` identifiers and their invocations
   // http://eslint.org/docs/rules/func-call-spacing
@@ -66,7 +66,7 @@ exports.default = {
 
   // Require function names to match the name of the variable or property to which they are assigned
   // http://eslint.org/docs/rules/func-name-matching
-  'func-name-matching': ['error', 'always', { includeCommonJSModuleExports: false }],
+  'func-name-matching': ['warn', 'always', { includeCommonJSModuleExports: false }],
 
   // Require or disallow named `function` expressions
   // http://eslint.org/docs/rules/func-names
@@ -133,7 +133,7 @@ exports.default = {
 
   // Enforce position of line comments
   // http://eslint.org/docs/rules/line-comment-position
-  'line-comment-position': ['error', { position: 'above' }],
+  'line-comment-position': ['warn', { position: 'above' }],
 
   // Enforce consistent linebreak style
   // http://eslint.org/docs/rules/linebreak-style
@@ -157,7 +157,7 @@ exports.default = {
 
   // Require or disallow newlines around directives
   // http://eslint.org/docs/rules/lines-around-directive
-  'lines-around-directive': ['error', {
+  'lines-around-directive': ['warn', {
     before: 'never',
     after: 'always'
   }],
@@ -218,7 +218,7 @@ exports.default = {
 
   // Require parentheses when invoking a constructor with no arguments
   // http://eslint.org/docs/rules/new-parens
-  'new-parens': 'error',
+  'new-parens': 'warn',
 
   // Require or disallow an empty line after var declarations
   // http://eslint.org/docs/rules/newline-after-var
@@ -317,9 +317,10 @@ exports.default = {
 
   // Enforce consistent line breaks inside braces
   // http://eslint.org/docs/rules/object-curly-newline
+  // TODO Need to tune `minProperties` count
   'object-curly-newline': ['warn', {
-    multiline: true,
-    minProperties: 2
+    ObjectExpression: { multiline: true, minProperties: 3 },
+    ObjectPattern: { multiline: true, minProperties: 3 }
   }],
 
   // Disallow or enforce spaces inside of curly braces in objects

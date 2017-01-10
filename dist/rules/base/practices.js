@@ -26,7 +26,7 @@ exports.default = {
 
   // Enforce that class methods utilize `this`
   // http://eslint.org/docs/rules/class-methods-use-this
-  'class-methods-use-this': 'error',
+  'class-methods-use-this': 'warn',
 
   // Limit Cyclomatic Complexity
   // http://eslint.org/docs/rules/complexity
@@ -34,12 +34,11 @@ exports.default = {
 
   // Require `return` statements to either always or never specify values
   // http://eslint.org/docs/rules/consistent-return
-  // TODO Check this 'error' or 'warn'
   'consistent-return': ['error', { treatUndefinedAsUnspecified: false }],
 
   // Require Following Curly Brace Conventions
   // http://eslint.org/docs/rules/curly
-  'curly': ['error', 'multi-line', 'consistent'],
+  'curly': ['warn', 'multi-line', 'consistent'],
 
   // Require `default` Case in `switch` Statements
   // http://eslint.org/docs/rules/default-case
@@ -47,11 +46,11 @@ exports.default = {
 
   // Enforce newline before and after dot
   // http://eslint.org/docs/rules/dot-location
-  'dot-location': ['error', 'property'],
+  'dot-location': ['warn', 'property'],
 
   // Require Dot Notation
   // http://eslint.org/docs/rules/dot-notation
-  'dot-notation': ['error', { allowKeywords: true }],
+  'dot-notation': ['warn', { allowKeywords: true }],
 
   // Require `===` and `!==`
   // Use '===' only with 'true', 'false', '0', '""' or '[]' values
@@ -170,7 +169,7 @@ exports.default = {
 
   // Disallow multiple spaces
   // http://eslint.org/docs/rules/no-multi-spaces
-  'no-multi-spaces': ['error', { exceptions: { Property: false } }],
+  'no-multi-spaces': ['warn', { exceptions: { Property: false } }],
 
   // Disallow Multiline Strings
   // http://eslint.org/docs/rules/no-multi-str
@@ -243,7 +242,7 @@ exports.default = {
 
   // Disallow Unused Expressions
   // http://eslint.org/docs/rules/no-unused-expressions
-  'no-unused-expressions': ['error', {
+  'no-unused-expressions': ['warn', {
     allowShortCircuit: false,
     allowTernary: false
   }],
@@ -297,7 +296,7 @@ exports.default = {
 
   // Require IIFEs to be Wrapped
   // http://eslint.org/docs/rules/wrap-iife
-  'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+  'wrap-iife': ['warn', 'outside', { functionPrototypeMethods: false }],
 
   // Require or disallow Yoda Conditions
   // http://eslint.org/docs/rules/yoda

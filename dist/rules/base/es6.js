@@ -7,7 +7,7 @@ exports.default = {
 
   // Require braces in arrow function body
   // http://eslint.org/docs/rules/arrow-body-style
-  'arrow-body-style': ['error', 'as-needed'],
+  'arrow-body-style': ['warn', 'as-needed', { requireReturnForObjectLiteral: false }],
 
   // Require parens in arrow function arguments
   // http://eslint.org/docs/rules/arrow-parens
@@ -90,7 +90,6 @@ exports.default = {
 
   // Suggest using arrow functions as callbacks
   // http://eslint.org/docs/rules/prefer-arrow-callback
-  // TODO Check options for this rule
   'prefer-arrow-callback': ['error', {
     allowNamedFunctions: false,
     allowUnboundThis: true
@@ -98,21 +97,21 @@ exports.default = {
 
   // Suggest using `const`
   // http://eslint.org/docs/rules/prefer-const
-  'prefer-const': ['error', {
+  'prefer-const': ['warn', {
     destructuring: 'any',
     ignoreReadBeforeAssign: false
   }],
 
   // Prefer destructuring from arrays and objects
   // http://eslint.org/docs/rules/prefer-destructuring
-  'prefer-destructuring': ['error', {
+  'prefer-destructuring': ['warn', {
     array: true,
     object: true
   }, { enforceForRenamedProperties: true }],
 
   // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
   // http://eslint.org/docs/rules/prefer-numeric-literals
-  'prefer-numeric-literals': 'error',
+  'prefer-numeric-literals': 'warn',
 
   // Suggest using Reflect methods where applicable
   // http://eslint.org/docs/rules/prefer-reflect
@@ -125,11 +124,11 @@ exports.default = {
 
   // Suggest using the spread operator instead of `.apply()`
   // http://eslint.org/docs/rules/prefer-spread
-  'prefer-spread': 'error',
+  'prefer-spread': 'warn',
 
   // Suggest using template literals instead of string concatenation
   // http://eslint.org/docs/rules/prefer-template
-  'prefer-template': 'error',
+  'prefer-template': 'warn',
 
   // Disallow generator functions that do not have `yield`
   // http://eslint.org/docs/rules/require-yield

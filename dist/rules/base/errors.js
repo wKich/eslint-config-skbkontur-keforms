@@ -15,7 +15,7 @@ exports.default = {
 
   // Disallow the use of `console`
   // http://eslint.org/docs/rules/no-console
-  'no-console': ['error'],
+  'no-console': ['warn'],
 
   // Disallow constant expressions in conditions
   // http://eslint.org/docs/rules/no-constant-condition
@@ -59,7 +59,7 @@ exports.default = {
 
   // Disallow unnecessary parentheses
   // http://eslint.org/docs/rules/no-extra-parens
-  'no-extra-parens': ['error', 'all', {
+  'no-extra-parens': ['warn', 'all', {
     conditionalAssign: true,
     nestedBinaryExpressions: false,
     returnAssign: true
@@ -67,7 +67,7 @@ exports.default = {
 
   // Disallow unnecessary semicolons
   // http://eslint.org/docs/rules/no-extra-semi
-  'no-extra-semi': 'error',
+  'no-extra-semi': 'warn',
 
   // Disallow reassigning `function` declarations
   // http://eslint.org/docs/rules/no-func-assign

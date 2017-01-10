@@ -48,7 +48,6 @@ exports.default = {
 
   // Disallow Use of `undefined` Variable
   // http://eslint.org/docs/rules/no-undefined
-  // TODO Enable?
   'no-undefined': 'off',
 
   // Disallow Unused Variables
