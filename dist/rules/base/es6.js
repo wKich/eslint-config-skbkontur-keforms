@@ -83,7 +83,7 @@ exports.default = {
   // Require Object Literal Shorthand Syntax
   // http://eslint.org/docs/rules/object-shorthand
   'object-shorthand': ['warn', 'always', {
-    avoidQuotes: true,
+    avoidQuotes: false,
     ignoreConstructors: false,
     avoidExplicitReturnArrows: true
   }],
