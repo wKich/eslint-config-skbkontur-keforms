@@ -263,6 +263,10 @@ exports.default = {
   // http://eslint.org/docs/rules/no-mixed-spaces-and-tabs
   'no-mixed-spaces-and-tabs': 'warn',
 
+  // Disallow use of chained assignment expressions
+  // http://eslint.org/docs/rules/no-multi-assign
+  'no-multi-assign': 'warn',
+
   // Disallow multiple empty lines
   // http://eslint.org/docs/rules/no-multiple-empty-lines
   'no-multiple-empty-lines': ['warn', {

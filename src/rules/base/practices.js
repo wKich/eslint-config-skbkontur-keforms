@@ -277,6 +277,10 @@ export default {
   // http://eslint.org/docs/rules/no-with
   'no-with': 'error',
 
+  // Require using Error objects as Promise rejection reasons
+  // http://eslint.org/docs/rules/prefer-promise-reject-errors
+  'prefer-promise-reject-errors': ['error', { allowEmptyReject: false }],
+
   // Require Radix Parameter
   // http://eslint.org/docs/rules/radix
   'radix': ['error', 'as-needed'],

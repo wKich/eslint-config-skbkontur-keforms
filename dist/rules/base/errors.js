@@ -60,9 +60,10 @@ exports.default = {
   // Disallow unnecessary parentheses
   // http://eslint.org/docs/rules/no-extra-parens
   'no-extra-parens': ['warn', 'all', {
-    conditionalAssign: true,
+    conditionalAssign: false,
+    ignoreJSX: 'multi-line',
     nestedBinaryExpressions: false,
-    returnAssign: true
+    returnAssign: false
   }],
 
   // Disallow unnecessary semicolons
