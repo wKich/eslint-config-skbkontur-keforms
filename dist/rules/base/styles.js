@@ -31,7 +31,7 @@ exports.default = {
 
   // Enforce or disallow capitalization of the first letter of a comment
   // http://eslint.org/docs/rules/capitalized-comments
-  'capitalized-comments': ['warn', 'always', { ignoreConsecutiveComments: true }],
+  'capitalized-comments': ['off', 'always', { ignoreConsecutiveComments: true }],
 
   // Require or disallow trailing commas
   // http://eslint.org/docs/rules/comma-dangle
