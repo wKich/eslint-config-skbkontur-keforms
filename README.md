@@ -9,6 +9,8 @@
   }
   ```
 - (Optional) Setup plugins for your favorite code editor
+- (Note) You need to install `eslint-import-resolver-webpack` if you use
+webpack alias in your project
 
 ## TODO
 

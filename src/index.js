@@ -78,7 +78,16 @@ module.exports = {
       },
 
       // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/webpack/README.md
-      webpack: { config: 'webpack.config.js' },
+      ...(function checkWebpackResolver() {
+        try {
+          // eslint-disable-next-line
+          require.resolve('eslint-import-resolver-webpack')
+
+          return { webpack: { config: 'webpack.config.js' } }
+        } catch (ignoreRequireWebpackResolverError) {
+          return {}
+        }
+      }()),
     },
 
     'import/docstyle': ['jsdoc', 'tomdoc'],

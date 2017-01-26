@@ -1,7 +1,6 @@
 {
   "extends": [ "./dist/index.js" ],
   "settings": {
-    "flowtype": { "onlyFilesWithFlowAnnotation": true },
-    "import/resolver": { "webpack": { "config": "" } }
+    "flowtype": { "onlyFilesWithFlowAnnotation": true }
   }
 }

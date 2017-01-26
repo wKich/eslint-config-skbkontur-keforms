@@ -55,16 +55,23 @@ module.exports = {
     'import/external-module-folders': ['node_modules'],
 
     // https://github.com/benmosher/eslint-plugin-import#resolvers
-    'import/resolver': {
+    'import/resolver': _extends({
 
       // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/node/README.md
       node: {
         extensions: ['.js', '.jsx']
-      },
+      }
 
-      // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/webpack/README.md
-      webpack: { config: 'webpack.config.js' }
-    },
+    }, function checkWebpackResolver() {
+      try {
+        // eslint-disable-next-line
+        require.resolve('eslint-import-resolver-webpack');
+
+        return { webpack: { config: 'webpack.config.js' } };
+      } catch (ignoreRequireWebpackResolverError) {
+        return {};
+      }
+    }()),
 
     'import/docstyle': ['jsdoc', 'tomdoc'],
 
