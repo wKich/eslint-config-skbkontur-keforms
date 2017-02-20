@@ -13,11 +13,19 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
   'react/forbid-component-props': ['warn', { forbid: ['className', 'style'] }],
 
+  // Forbid certain elements
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
+  'react/forbid-elements': ['error', { forbid: [] }],
+
   // Forbid certain propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
   'react/forbid-prop-types': ['warn', {
     forbid: ['any', 'array', 'object']
   }],
+
+  // Forbid foreign propTypes
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
+  'react/forbid-foreign-prop-types': 'warn',
 
   // Prevent using Array index in `key` props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
@@ -152,5 +160,9 @@ exports.default = {
 
   // Enforce style prop value being an object
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
-  'react/style-prop-object': 'error'
+  'react/style-prop-object': 'error',
+
+  // Prevent void DOM elements (e.g. `<img />`, `<br />`) from receiving children
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
+  'react/void-dom-elements-no-children': 'error'
 };
