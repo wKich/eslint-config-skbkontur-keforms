@@ -1,5 +1,7 @@
 /* eslint quote-props: 'off' */
 
+import { check } from '../../utils/rules-availability'
+
 const INDENT_SIZE = 2
 const MAX_BLOCKS_DEPTH = 4
 const MAX_CALLBACK_DEPTH = 3
@@ -436,6 +438,10 @@ export default {
       exceptions: ['*'],
     },
   }],
+
+  // Require or disallow spacing between template tags and their literals
+  // http://eslint.org/docs/rules/template-tag-spacing
+  ...check('template-tag-spacing', ['warn', 'never']),
 
   // Require or disallow the Unicode Byte Order Mark (BOM)
   // http://eslint.org/docs/rules/unicode-bom

@@ -3,7 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/* eslint quote-props: 'off' */
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /* eslint quote-props: 'off' */
+
+var _rulesAvailability = require('../../utils/rules-availability');
 
 const INDENT_SIZE = 2;
 const MAX_BLOCKS_DEPTH = 4;
@@ -11,7 +14,7 @@ const MAX_CALLBACK_DEPTH = 3;
 const MAX_FUNCTION_PARAMS = 4;
 const MAX_FUNCTION_STATEMENTS = 30;
 
-exports.default = {
+exports.default = _extends({
 
   // Disallow or enforce spaces inside of brackets
   // http://eslint.org/docs/rules/array-bracket-spacing
@@ -434,7 +437,9 @@ exports.default = {
       balanced: true,
       exceptions: ['*']
     }
-  }],
+  }]
+
+}, (0, _rulesAvailability.check)('template-tag-spacing', ['warn', 'never']), {
 
   // Require or disallow the Unicode Byte Order Mark (BOM)
   // http://eslint.org/docs/rules/unicode-bom
@@ -443,4 +448,4 @@ exports.default = {
   // Require Regex Literals to be Wrapped
   // http://eslint.org/docs/rules/wrap-regex
   'wrap-regex': 'warn'
-};
+});

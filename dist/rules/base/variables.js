@@ -57,14 +57,15 @@ exports.default = {
     args: 'all',
     argsIgnorePattern: '^_',
     caughtErrors: 'all',
-    caughtErrorsIgnorePattern: '^ignore'
+    caughtErrorsIgnorePattern: '^ignore',
+    ignoreRestSiblings: true
   }],
 
   // Disallow Early Use
   // http://eslint.org/docs/rules/no-use-before-define
-  // TODO Need for hoist, but all important code always below :(
   'no-use-before-define': ['error', {
     functions: true,
-    classes: true
+    classes: true,
+    variables: true
   }]
 };
