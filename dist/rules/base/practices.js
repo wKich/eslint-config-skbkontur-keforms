@@ -244,7 +244,8 @@ exports.default = {
   // http://eslint.org/docs/rules/no-unused-expressions
   'no-unused-expressions': ['warn', {
     allowShortCircuit: false,
-    allowTernary: false
+    allowTernary: false,
+    'allowTaggedTemplates': false
   }],
 
   // Disallow Unused Labels

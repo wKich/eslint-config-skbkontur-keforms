@@ -13,8 +13,13 @@ try {
 }
 
 // TODO Check eslint-plugin rules version
+// TODO Check whole rules set
 
-const rules = { 'template-tag-spacing': '>= 3.15.0' }
+const rules = {
+  'template-tag-spacing': '>= 3.15.0',
+  'no-compare-neg-zero': '>=3.17.0',
+  'nonblock-statement-body-position': '>=3.17.0',
+}
 
 export function check(ruleName, body) {
   // NOTE For now checking don't support handle options changes correctly

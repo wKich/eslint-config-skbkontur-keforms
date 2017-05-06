@@ -29,6 +29,10 @@ exports.default = {
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-primitive-constructor-types
   'flowtype/no-primitive-constructor-types': 'error',
 
+  // Disallows Flow type imports, aliases, and annotations in files missing a valid Flow file declaration.
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-types-missing-file-annotation
+  'flowtype/no-types-missing-file-annotation': 'error',
+
   // Warns against weak type annotations `any`, `Object` and `Function`.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-weak-types
   'flowtype/no-weak-types': ['error', {

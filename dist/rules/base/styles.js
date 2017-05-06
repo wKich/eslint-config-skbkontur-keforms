@@ -140,7 +140,6 @@ exports.default = _extends({
 
   // Enforce consistent linebreak style
   // http://eslint.org/docs/rules/linebreak-style
-  // TODO How to check this in windows?
   'linebreak-style': ['warn', 'unix'],
 
   // Require empty lines around comments
@@ -296,6 +295,7 @@ exports.default = _extends({
   // Disallow specified syntax
   // http://eslint.org/docs/rules/no-restricted-syntax
   // TODO Add restricted statements
+  // TODO Write more restricted syntax selectors
   'no-restricted-syntax': ['error', 'WithStatement'],
 
   // Disallow tabs in file
@@ -320,7 +320,9 @@ exports.default = _extends({
 
   // Disallow whitespace before properties
   // http://eslint.org/docs/rules/no-whitespace-before-property
-  'no-whitespace-before-property': 'warn',
+  'no-whitespace-before-property': 'warn'
+
+}, (0, _rulesAvailability.check)('nonblock-statement-body-position', ['warn', 'beside']), {
 
   // Enforce consistent line breaks inside braces
   // http://eslint.org/docs/rules/object-curly-newline
@@ -379,7 +381,6 @@ exports.default = _extends({
 
   // Enforce or Disallow Semicolons
   // http://eslint.org/docs/rules/semi
-  // TODO We need the poll
   'semi': ['warn', 'never'],
 
   // Enforce spacing before and after semicolons

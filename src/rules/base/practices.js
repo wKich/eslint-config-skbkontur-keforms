@@ -240,6 +240,7 @@ export default {
   'no-unused-expressions': ['warn', {
     allowShortCircuit: false,
     allowTernary: false,
+    'allowTaggedTemplates': false,
   }],
 
   // Disallow Unused Labels
