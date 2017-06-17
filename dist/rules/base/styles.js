@@ -3,10 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /* eslint quote-props: 'off' */
-
-var _rulesAvailability = require('../../utils/rules-availability');
+/* eslint quote-props: 'off' */
 
 const INDENT_SIZE = 2;
 const MAX_BLOCKS_DEPTH = 4;
@@ -14,7 +11,7 @@ const MAX_CALLBACK_DEPTH = 3;
 const MAX_FUNCTION_PARAMS = 4;
 const MAX_FUNCTION_STATEMENTS = 30;
 
-exports.default = _extends({
+exports.default = {
 
   // Disallow or enforce spaces inside of brackets
   // http://eslint.org/docs/rules/array-bracket-spacing
@@ -320,9 +317,11 @@ exports.default = _extends({
 
   // Disallow whitespace before properties
   // http://eslint.org/docs/rules/no-whitespace-before-property
-  'no-whitespace-before-property': 'warn'
+  'no-whitespace-before-property': 'warn',
 
-}, (0, _rulesAvailability.check)('nonblock-statement-body-position', ['warn', 'beside']), {
+  // Enforce the location of single-line statements
+  // http://eslint.org/docs/rules/nonblock-statement-body-position
+  'nonblock-statement-body-position': ['warn', 'beside'],
 
   // Enforce consistent line breaks inside braces
   // http://eslint.org/docs/rules/object-curly-newline
@@ -438,9 +437,11 @@ exports.default = _extends({
       balanced: true,
       exceptions: ['*']
     }
-  }]
+  }],
 
-}, (0, _rulesAvailability.check)('template-tag-spacing', ['warn', 'never']), {
+  // Require or disallow spacing between template tags and their literals
+  // http://eslint.org/docs/rules/template-tag-spacing
+  'template-tag-spacing': ['warn', 'never'],
 
   // Require or disallow the Unicode Byte Order Mark (BOM)
   // http://eslint.org/docs/rules/unicode-bom
@@ -449,4 +450,4 @@ exports.default = _extends({
   // Require Regex Literals to be Wrapped
   // http://eslint.org/docs/rules/wrap-regex
   'wrap-regex': 'warn'
-});
+};

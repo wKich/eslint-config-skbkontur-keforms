@@ -1,5 +1,3 @@
-import { check } from '../../utils/rules-availability'
-
 export default {
 
   // Disallow `await` inside of loops
@@ -8,7 +6,7 @@ export default {
 
   // Disallow comparing against `-0`
   // http://eslint.org/docs/rules/no-compare-neg-zero
-  ...check('no-compare-neg-zero', 'error'),
+  'no-compare-neg-zero': 'error',
 
   // Disallow assignment operators in conditional expressions
   // http://eslint.org/docs/rules/no-cond-assign
