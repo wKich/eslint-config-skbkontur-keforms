@@ -100,9 +100,9 @@ export default {
   // Prefer destructuring from arrays and objects
   // http://eslint.org/docs/rules/prefer-destructuring
   'prefer-destructuring': ['warn', {
-    array: true,
+    array: false,
     object: true,
-  }, { enforceForRenamedProperties: true }],
+  }, { enforceForRenamedProperties: false }],
 
   // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
   // http://eslint.org/docs/rules/prefer-numeric-literals
@@ -136,8 +136,8 @@ export default {
 
   // Import Sorting
   // http://eslint.org/docs/rules/sort-imports
-  // TODO Not work autofix?
-  'sort-imports': ['warn', {
+  // NOTE This conflicts with `import/order` rule
+  'sort-imports': ['off', {
     ignoreCase: false,
     ignoreMemberSort: false,
     memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],

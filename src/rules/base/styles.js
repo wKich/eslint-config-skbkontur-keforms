@@ -248,7 +248,8 @@ export default {
 
   // Disallow mixes of different operators
   // http://eslint.org/docs/rules/no-mixed-operators
-  'no-mixed-operators': ['warn', {
+  // TODO Need to tune groups
+  'no-mixed-operators': ['off', {
     groups: [
       ['+', '-', '*', '/', '%', '**'],
       ['&', '|', '^', '~', '<<', '>>', '>>>'],
@@ -350,7 +351,7 @@ export default {
 
   // Operator Assignment Shorthand
   // http://eslint.org/docs/rules/operator-assignment
-  'operator-assignment': ['warn', 'never'],
+  'operator-assignment': ['warn', 'always'],
 
   // Operator Linebreak
   // http://eslint.org/docs/rules/operator-linebreak

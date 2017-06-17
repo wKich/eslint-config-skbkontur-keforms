@@ -68,8 +68,7 @@ export default {
 
   // Prevent multiple component definition per file
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
-  // TODO Check if need or not
-  'react/no-multi-comp': ['warn', { ignoreStateless: false }],
+  'react/no-multi-comp': ['warn', { ignoreStateless: true }],
 
   // Prevent usage of the return value of `React.render`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
@@ -77,7 +76,6 @@ export default {
 
   // Prevent usage of `setState`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
-  // TODO Change to 'error' when use Redux/Reelm in project
   'react/no-set-state': 'off',
 
   // Prevent using string references in `ref` attribute
