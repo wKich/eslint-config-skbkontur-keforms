@@ -1,5 +1,9 @@
 export default {
 
+  // Prevent extraneous defaultProps on components
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
+  'react/default-props-match-prop-types': ['warn', { allowRequiredDefaults: false }],
+
   // Prevent missing displayName in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
   'react/display-name': ['warn', { ignoreTranspilerName: false }],
@@ -67,6 +71,10 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
   'react/no-multi-comp': ['warn', { ignoreStateless: true }],
 
+  // Prevent usage of `shouldComponentUpdate` when extending `React.PureComponent`
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
+  'react/no-redundant-should-component-update': 'error',
+
   // Prevent usage of the return value of `React.render`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
   'react/no-render-return-value': 'error',
@@ -96,6 +104,10 @@ export default {
       skipShapeProps: false,
     },
   ],
+
+  // Prevent usage of `setState` in `componentWillUpdate`
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md
+  'react/no-will-update-set-state': 'error',
 
   // Enforce ES5 or ES6 class for React Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md

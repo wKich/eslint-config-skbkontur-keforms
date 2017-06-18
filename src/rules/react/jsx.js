@@ -10,6 +10,10 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
   'react/jsx-closing-bracket-location': ['warn', 'line-aligned'],
 
+  // Validate closing tag location in JSX
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+  'react/jsx-closing-tag-location': 'warn',
+
   // Enforce or disallow spaces inside of curly braces in JSX attributes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
   // TODO Check allowMultiline true/false
@@ -106,12 +110,9 @@ export default {
       noSortAlphabetically: false,
       shorthandFirst: true,
       shorthandLast: false,
+      reservedFirst: false,
     },
   ],
-
-  // Validate spacing before closing bracket in JSX
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
-  'react/jsx-space-before-closing': ['warn', 'always'],
 
   // Validate whitespace in and around the JSX opening and closing brackets
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
@@ -140,6 +141,7 @@ export default {
       declaration: true,
       assignment: true,
       return: true,
+      arrow: true,
     },
   ],
 }
