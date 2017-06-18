@@ -111,11 +111,11 @@ export default {
 
   // Enforce ES5 or ES6 class for React Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
-  'react/prefer-es6-class': ['error', 'always'],
+  'react/prefer-es6-class': ['warn', 'always'],
 
   // Enforce stateless React Components to be written as a pure function
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-  'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
+  'react/prefer-stateless-function': ['warn', { ignorePureComponents: true }],
 
   // Prevent missing props validation in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -147,7 +147,7 @@ export default {
 
   // Prevent extra closing tags for components without children
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
-  'react/self-closing-comp': ['error', { component: true, html: false }],
+  'react/self-closing-comp': ['warn', { component: true, html: false }],
 
   // Enforce component methods order
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md

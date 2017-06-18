@@ -7,7 +7,7 @@ exports.default = {
 
   // Ensure all imports appear before other statements
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
-  'import/first': ['error', 'absolute-first'],
+  'import/first': ['warn', 'absolute-first'],
 
   // Report repeated import of the same module in multiple places
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
@@ -19,7 +19,7 @@ exports.default = {
 
   // Ensure consistent use of file extension within the import path
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-  'import/extensions': ['error', 'always', { js: 'never', jsx: 'never' }],
+  'import/extensions': ['warn', 'always', { js: 'never', jsx: 'never' }],
 
   // Enforce a convention in module import order
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
@@ -30,7 +30,7 @@ exports.default = {
 
   // Enforce a newline after import statements
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
-  'import/newline-after-import': ['error', { count: 1 }],
+  'import/newline-after-import': ['warn', { count: 1 }],
 
   // Prefer a default export if module exports a single name
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md

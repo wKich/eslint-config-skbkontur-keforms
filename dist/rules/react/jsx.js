@@ -33,7 +33,7 @@ exports.default = {
 
   // Restrict file extensions that may contain JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-  'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+  'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
 
   // Enforce position of the first prop in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
