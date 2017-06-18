@@ -15,10 +15,7 @@ exports.default = {
 
   // Require space before/after arrow function’s arrow
   // http://eslint.org/docs/rules/arrow-spacing
-  'arrow-spacing': ['warn', {
-    before: true,
-    after: true
-  }],
+  'arrow-spacing': ['warn', { before: true, after: true }],
 
   // Verify calls of `super()` in constructors
   // http://eslint.org/docs/rules/constructor-super
@@ -104,10 +101,7 @@ exports.default = {
 
   // Prefer destructuring from arrays and objects
   // http://eslint.org/docs/rules/prefer-destructuring
-  'prefer-destructuring': ['warn', {
-    array: false,
-    object: true
-  }, { enforceForRenamedProperties: false }],
+  'prefer-destructuring': ['warn', { array: false, object: true }, { enforceForRenamedProperties: false }],
 
   // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
   // http://eslint.org/docs/rules/prefer-numeric-literals

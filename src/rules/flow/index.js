@@ -30,11 +30,14 @@ export default {
 
   // Warns against weak type annotations `any`, `Object` and `Function`.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-weak-types
-  'flowtype/no-weak-types': ['warn', {
-    any: true,
-    Object: true,
-    Function: true,
-  }],
+  'flowtype/no-weak-types': [
+    'warn',
+    {
+      any: true,
+      Object: true,
+      Function: true,
+    },
+  ],
 
   // Enforces consistent separators between properties in Flow object types.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-object-type-delimiter
@@ -46,10 +49,14 @@ export default {
 
   // Requires that functions have return type annotation.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-return-type
-  'flowtype/require-return-type': ['off', 'always', {
-    annotateUndefined: 'always',
-    excludeArrowFunctions: 'expressionsOnly',
-  }],
+  'flowtype/require-return-type': [
+    'off',
+    'always',
+    {
+      annotateUndefined: 'always',
+      excludeArrowFunctions: 'expressionsOnly',
+    },
+  ],
 
   // This rule validates Flow file annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-valid-file-annotation
@@ -65,10 +72,14 @@ export default {
 
   // Enforces sorting of Object annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-sort-keys
-  'flowtype/sort-keys': ['warn', 'asc', {
-    caseSensitive: true,
-    natural: true,
-  }],
+  'flowtype/sort-keys': [
+    'warn',
+    'asc',
+    {
+      caseSensitive: true,
+      natural: true,
+    },
+  ],
 
   // Enforces consistent spacing after the type annotation colon.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-space-after-type-colon

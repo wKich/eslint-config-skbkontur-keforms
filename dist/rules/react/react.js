@@ -19,9 +19,7 @@ exports.default = {
 
   // Forbid certain propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
-  'react/forbid-prop-types': ['warn', {
-    forbid: ['any', 'array', 'object']
-  }],
+  'react/forbid-prop-types': ['warn', { forbid: ['any', 'array', 'object'] }],
 
   // Forbid foreign propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
@@ -133,10 +131,7 @@ exports.default = {
 
   // Prevent extra closing tags for components without children
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
-  'react/self-closing-comp': ['error', {
-    component: true,
-    html: false
-  }],
+  'react/self-closing-comp': ['error', { component: true, html: false }],
 
   // Enforce component methods order
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md

@@ -46,10 +46,7 @@ module.exports = {
 
     // A whitelist of file extensions that will be parsed as modules and inspected for exports.
     // https://github.com/benmosher/eslint-plugin-import#importextensions
-    'import/extensions': [
-      '.js',
-      '.jsx',
-    ],
+    'import/extensions': ['.js', '.jsx'],
 
     // A list of regex strings that, if matched by a path, will not report the matching module
     // if no exports are found.
@@ -71,10 +68,7 @@ module.exports = {
 
       // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/node/README.md
       node: {
-        extensions: [
-          '.js',
-          '.jsx',
-        ],
+        extensions: ['.js', '.jsx'],
       },
 
       // https://github.com/benmosher/eslint-plugin-import/blob/master/resolvers/webpack/README.md

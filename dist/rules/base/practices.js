@@ -11,10 +11,7 @@ exports.default = {
 
   // Enforces getter/setter pairs in objects
   // http://eslint.org/docs/rules/accessor-pairs
-  'accessor-pairs': ['off', {
-    setWithoutGet: true,
-    getWithoutSet: false
-  }],
+  'accessor-pairs': ['off', { setWithoutGet: true, getWithoutSet: false }],
 
   // Enforces `return` statements in callbacks of array’s methods
   // http://eslint.org/docs/rules/array-callback-return
@@ -144,10 +141,7 @@ exports.default = {
 
   // Disallow Labeled Statements
   // http://eslint.org/docs/rules/no-labels
-  'no-labels': ['error', {
-    allowLoop: false,
-    allowSwitch: false
-  }],
+  'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
 
   // Disallow Unnecessary Nested Blocks
   // http://eslint.org/docs/rules/no-lone-blocks

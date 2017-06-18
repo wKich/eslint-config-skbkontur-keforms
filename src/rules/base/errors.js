@@ -1,5 +1,9 @@
 export default {
 
+  // Enforce `for` loop update clause moving the counter in the right direction
+  // http://eslint.org/docs/rules/for-direction
+  'for-direction': 'error',
+
   // Disallow `await` inside of loops
   // http://eslint.org/docs/rules/no-await-in-loop
   'no-await-in-loop': 'error',
@@ -58,12 +62,16 @@ export default {
 
   // Disallow unnecessary parentheses
   // http://eslint.org/docs/rules/no-extra-parens
-  'no-extra-parens': ['warn', 'all', {
-    conditionalAssign: false,
-    ignoreJSX: 'multi-line',
-    nestedBinaryExpressions: false,
-    returnAssign: false,
-  }],
+  'no-extra-parens': [
+    'warn',
+    'all',
+    {
+      conditionalAssign: false,
+      ignoreJSX: 'multi-line',
+      nestedBinaryExpressions: false,
+      returnAssign: false,
+    },
+  ],
 
   // Disallow unnecessary semicolons
   // http://eslint.org/docs/rules/no-extra-semi
@@ -83,12 +91,15 @@ export default {
 
   // Disallow irregular whitespace outside of strings and comments
   // http://eslint.org/docs/rules/no-irregular-whitespace
-  'no-irregular-whitespace': ['error', {
-    skipStrings: false,
-    skipComments: false,
-    skipRegExps: false,
-    skipTemplates: false,
-  }],
+  'no-irregular-whitespace': [
+    'error',
+    {
+      skipStrings: false,
+      skipComments: false,
+      skipRegExps: false,
+      skipTemplates: false,
+    },
+  ],
 
   // Disallow calling global object properties as functions
   // http://eslint.org/docs/rules/no-obj-calls

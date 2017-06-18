@@ -14,23 +14,23 @@ export default {
 
   // Ensure consistent use of file extension within the import path
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-  'import/extensions': ['error', 'always', {
-    js: 'never',
-    jsx: 'never',
-  }],
+  'import/extensions': ['error', 'always', { js: 'never', jsx: 'never' }],
 
   // Enforce a convention in module import order
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-  'import/order': ['warn', {
-    'newlines-between': 'ignore',
-    groups: [
-      'builtin',
-      'external',
-      'internal',
-      'parent',
-      ['sibling', 'index'],
-    ],
-  }],
+  'import/order': [
+    'warn',
+    {
+      'newlines-between': 'ignore',
+      groups: [
+        'builtin',
+        'external',
+        'internal',
+        'parent',
+        ['sibling', 'index'],
+      ],
+    },
+  ],
 
   // Enforce a newline after import statements
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md

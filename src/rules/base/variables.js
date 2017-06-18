@@ -23,11 +23,14 @@ export default {
 
   // Disallow Shadowing
   // http://eslint.org/docs/rules/no-shadow
-  'no-shadow': ['error', {
-    builtinGlobals: true,
-    hoist: 'all',
-    allow: [],
-  }],
+  'no-shadow': [
+    'error',
+    {
+      builtinGlobals: true,
+      hoist: 'all',
+      allow: [],
+    },
+  ],
 
   // Disallow Shadowing of Restricted Names
   // http://eslint.org/docs/rules/no-shadow-restricted-names
@@ -47,20 +50,26 @@ export default {
 
   // Disallow Unused Variables
   // http://eslint.org/docs/rules/no-unused-vars
-  'no-unused-vars': ['error', {
-    vars: 'all',
-    args: 'all',
-    argsIgnorePattern: '^_',
-    caughtErrors: 'all',
-    caughtErrorsIgnorePattern: '^ignore',
-    ignoreRestSiblings: true,
-  }],
+  'no-unused-vars': [
+    'error',
+    {
+      vars: 'all',
+      args: 'all',
+      argsIgnorePattern: '^_',
+      caughtErrors: 'all',
+      caughtErrorsIgnorePattern: '^ignore',
+      ignoreRestSiblings: true,
+    },
+  ],
 
   // Disallow Early Use
   // http://eslint.org/docs/rules/no-use-before-define
-  'no-use-before-define': ['error', {
-    functions: true,
-    classes: true,
-    variables: true,
-  }],
+  'no-use-before-define': [
+    'error',
+    {
+      functions: true,
+      classes: true,
+      variables: true,
+    },
+  ],
 }

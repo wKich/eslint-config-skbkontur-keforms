@@ -56,10 +56,7 @@ exports.default = {
 
   // Limit maximum of props on a single line in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-  'react/jsx-max-props-per-line': ['warn', {
-    maximum: 2,
-    when: 'multiline'
-  }],
+  'react/jsx-max-props-per-line': ['warn', { maximum: 2, when: 'multiline' }],
 
   // Prevent usage of `.bind()` and arrow functions in JSX props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md

@@ -10,10 +10,7 @@ export default {
 
   // Require space before/after arrow function’s arrow
   // http://eslint.org/docs/rules/arrow-spacing
-  'arrow-spacing': ['warn', {
-    before: true,
-    after: true,
-  }],
+  'arrow-spacing': ['warn', { before: true, after: true }],
 
   // Verify calls of `super()` in constructors
   // http://eslint.org/docs/rules/constructor-super
@@ -65,11 +62,14 @@ export default {
 
   // Disallow renaming import, export, and destructured assignments to the same name
   // http://eslint.org/docs/rules/no-useless-rename
-  'no-useless-rename': ['warn', {
-    ignoreDestructuring: false,
-    ignoreImport: false,
-    ignoreExport: false,
-  }],
+  'no-useless-rename': [
+    'warn',
+    {
+      ignoreDestructuring: false,
+      ignoreImport: false,
+      ignoreExport: false,
+    },
+  ],
 
   // Require `let` or `const` instead of `var`
   // http://eslint.org/docs/rules/no-var
@@ -77,32 +77,43 @@ export default {
 
   // Require Object Literal Shorthand Syntax
   // http://eslint.org/docs/rules/object-shorthand
-  'object-shorthand': ['warn', 'always', {
-    avoidQuotes: false,
-    ignoreConstructors: false,
-    avoidExplicitReturnArrows: true,
-  }],
+  'object-shorthand': [
+    'warn',
+    'always',
+    {
+      avoidQuotes: false,
+      ignoreConstructors: false,
+      avoidExplicitReturnArrows: true,
+    },
+  ],
 
   // Suggest using arrow functions as callbacks
   // http://eslint.org/docs/rules/prefer-arrow-callback
-  'prefer-arrow-callback': ['error', {
-    allowNamedFunctions: false,
-    allowUnboundThis: true,
-  }],
+  'prefer-arrow-callback': [
+    'error',
+    {
+      allowNamedFunctions: false,
+      allowUnboundThis: true,
+    },
+  ],
 
   // Suggest using `const`
   // http://eslint.org/docs/rules/prefer-const
-  'prefer-const': ['warn', {
-    destructuring: 'any',
-    ignoreReadBeforeAssign: false,
-  }],
+  'prefer-const': [
+    'warn',
+    {
+      destructuring: 'any',
+      ignoreReadBeforeAssign: false,
+    },
+  ],
 
   // Prefer destructuring from arrays and objects
   // http://eslint.org/docs/rules/prefer-destructuring
-  'prefer-destructuring': ['warn', {
-    array: false,
-    object: true,
-  }, { enforceForRenamedProperties: false }],
+  'prefer-destructuring': [
+    'warn',
+    { array: false, object: true },
+    { enforceForRenamedProperties: false },
+  ],
 
   // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
   // http://eslint.org/docs/rules/prefer-numeric-literals
@@ -137,11 +148,14 @@ export default {
   // Import Sorting
   // http://eslint.org/docs/rules/sort-imports
   // NOTE This conflicts with `import/order` rule
-  'sort-imports': ['off', {
-    ignoreCase: false,
-    ignoreMemberSort: false,
-    memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
-  }],
+  'sort-imports': [
+    'off',
+    {
+      ignoreCase: false,
+      ignoreMemberSort: false,
+      memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+    },
+  ],
 
   // Require symbol descriptions
   // http://eslint.org/docs/rules/symbol-description
