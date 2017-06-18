@@ -30,7 +30,7 @@ exports.default = {
 
   // Enforce a newline after import statements
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
-  'import/newline-after-import': 'error',
+  'import/newline-after-import': ['error', { count: 1 }],
 
   // Prefer a default export if module exports a single name
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
@@ -46,5 +46,16 @@ exports.default = {
 
   // Forbid named default exports
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
-  'import/no-named-default': 'error'
+  'import/no-named-default': 'error',
+
+  // Forbid anonymous values as default exports
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
+  'import/no-anonymous-default-export': ['warn', {
+    allowArray: true,
+    allowArrowFunction: false,
+    allowAnonymousClass: false,
+    allowAnonymousFunction: false,
+    allowLiteral: true,
+    allowObject: true
+  }]
 };
