@@ -71,7 +71,8 @@ exports.default = {
     conditionalAssign: false,
     ignoreJSX: 'multi-line',
     nestedBinaryExpressions: false,
-    returnAssign: false
+    returnAssign: false,
+    enforceForArrowConditionals: false
   }],
 
   // Disallow unnecessary semicolons

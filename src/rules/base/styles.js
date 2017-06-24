@@ -308,7 +308,13 @@ export default {
 
   // Disallow trailing whitespace at the end of lines
   // http://eslint.org/docs/rules/no-trailing-spaces
-  'no-trailing-spaces': ['warn', { skipBlankLines: false }],
+  'no-trailing-spaces': [
+    'warn',
+    {
+      skipBlankLines: false,
+      ignoreComments: false,
+    },
+  ],
 
   // Disallow dangling underscores in identifiers
   // http://eslint.org/docs/rules/no-underscore-dangle

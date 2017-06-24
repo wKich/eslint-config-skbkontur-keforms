@@ -70,6 +70,7 @@ export default {
       ignoreJSX: 'multi-line',
       nestedBinaryExpressions: false,
       returnAssign: false,
+      enforceForArrowConditionals: false,
     },
   ],
 
