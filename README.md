@@ -1,5 +1,7 @@
 ## How to use
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wKich/eslint-config-skbkontur-keforms.svg)](https://greenkeeper.io/)
+
 - Run `npm install eslint-config-skbkontur-keforms`
 - Extend your local `.eslintrc.json` config:
 
