@@ -10,13 +10,21 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
   'react/jsx-closing-bracket-location': ['warn', 'line-aligned'],
 
+  // Validate closing tag location in JSX
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+  'react/jsx-closing-tag-location': 'warn',
+
   // Enforce or disallow spaces inside of curly braces in JSX attributes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
   // TODO Check allowMultiline true/false
-  'react/jsx-curly-spacing': ['warn', 'never', {
-    allowMultiline: true,
-    spacing: { objectLiterals: 'never' },
-  }],
+  'react/jsx-curly-spacing': [
+    'warn',
+    'never',
+    {
+      allowMultiline: true,
+      spacing: { objectLiterals: 'never' },
+    },
+  ],
 
   // Enforce or disallow spaces around equal signs in JSX attributes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
@@ -24,7 +32,7 @@ export default {
 
   // Restrict file extensions that may contain JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-  'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+  'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
 
   // Enforce position of the first prop in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
@@ -32,10 +40,13 @@ export default {
 
   // Enforce event handler naming conventions in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
-  'react/jsx-handler-names': ['warn', {
-    eventHandlerPrefix: 'handle',
-    eventHandlerPropPrefix: 'on',
-  }],
+  'react/jsx-handler-names': [
+    'warn',
+    {
+      eventHandlerPrefix: 'handle',
+      eventHandlerPropPrefix: 'on',
+    },
+  ],
 
   // Validate JSX indentation
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
@@ -51,18 +62,18 @@ export default {
 
   // Limit maximum of props on a single line in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-  'react/jsx-max-props-per-line': ['warn', {
-    maximum: 2,
-    when: 'multiline',
-  }],
+  'react/jsx-max-props-per-line': ['warn', { maximum: 2, when: 'multiline' }],
 
   // Prevent usage of `.bind()` and arrow functions in JSX props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-  'react/jsx-no-bind': ['error', {
-    ignoreRefs: false,
-    allowArrowFunctions: false,
-    allowBind: false,
-  }],
+  'react/jsx-no-bind': [
+    'error',
+    {
+      ignoreRefs: false,
+      allowArrowFunctions: false,
+      allowBind: false,
+    },
+  ],
 
   // Prevent comments from being inserted as text nodes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
@@ -74,7 +85,7 @@ export default {
 
   // Prevent usage of unwrapped JSX strings
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
-  // TODO For now literals is escaped in dev bundle https://github.com/babel/babel/issues/4909
+  // NOTE For now literals is escaped in dev bundle https://github.com/babel/babel/issues/4909
   'react/jsx-no-literals': 'warn',
 
   // Prevent usage of unsafe `target='_blank'`
@@ -91,25 +102,28 @@ export default {
 
   // Enforce props alphabetical sorting
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
-  'react/jsx-sort-props': ['warn', {
-    callbacksLast: true,
-    ignoreCase: false,
-    noSortAlphabetically: false,
-    shorthandFirst: true,
-    shorthandLast: false,
-  }],
-
-  // Validate spacing before closing bracket in JSX
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
-  'react/jsx-space-before-closing': ['warn', 'always'],
+  'react/jsx-sort-props': [
+    'warn',
+    {
+      callbacksLast: true,
+      ignoreCase: false,
+      noSortAlphabetically: false,
+      shorthandFirst: true,
+      shorthandLast: false,
+      reservedFirst: false,
+    },
+  ],
 
   // Validate whitespace in and around the JSX opening and closing brackets
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
-  'react/jsx-tag-spacing': ['warn', {
-    closingSlash: 'never',
-    beforeSelfClosing: 'always',
-    afterOpening: 'never',
-  }],
+  'react/jsx-tag-spacing': [
+    'warn',
+    {
+      closingSlash: 'never',
+      beforeSelfClosing: 'always',
+      afterOpening: 'never',
+    },
+  ],
 
   // Prevent React to be incorrectly marked as unused
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
@@ -121,9 +135,13 @@ export default {
 
   // Prevent missing parentheses around multilines JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
-  'react/jsx-wrap-multilines': ['warn', {
-    declaration: true,
-    assignment: true,
-    return: true,
-  }],
+  'react/jsx-wrap-multilines': [
+    'warn',
+    {
+      declaration: true,
+      assignment: true,
+      return: true,
+      arrow: true,
+    },
+  ],
 }

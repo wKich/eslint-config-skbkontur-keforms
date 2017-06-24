@@ -7,10 +7,7 @@ exports.default = {
 
   // Ensure imports point to a file/module that can be resolved
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-  'import/no-unresolved': ['error', {
-    commonjs: true,
-    amd: true
-  }],
+  'import/no-unresolved': ['error', { commonjs: true, amd: true }],
 
   // Ensure named imports correspond to a named export in the remote file
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md

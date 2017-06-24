@@ -15,10 +15,7 @@ exports.default = {
 
   // Require space before/after arrow function’s arrow
   // http://eslint.org/docs/rules/arrow-spacing
-  'arrow-spacing': ['warn', {
-    before: true,
-    after: true
-  }],
+  'arrow-spacing': ['warn', { before: true, after: true }],
 
   // Verify calls of `super()` in constructors
   // http://eslint.org/docs/rules/constructor-super
@@ -104,10 +101,7 @@ exports.default = {
 
   // Prefer destructuring from arrays and objects
   // http://eslint.org/docs/rules/prefer-destructuring
-  'prefer-destructuring': ['warn', {
-    array: true,
-    object: true
-  }, { enforceForRenamedProperties: true }],
+  'prefer-destructuring': ['warn', { array: false, object: true }, { enforceForRenamedProperties: false }],
 
   // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
   // http://eslint.org/docs/rules/prefer-numeric-literals
@@ -141,8 +135,8 @@ exports.default = {
 
   // Import Sorting
   // http://eslint.org/docs/rules/sort-imports
-  // TODO Not work autofix?
-  'sort-imports': ['warn', {
+  // NOTE This conflicts with `import/order` rule
+  'sort-imports': ['off', {
     ignoreCase: false,
     ignoreMemberSort: false,
     memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple']

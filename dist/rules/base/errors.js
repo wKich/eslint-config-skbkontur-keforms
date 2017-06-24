@@ -3,18 +3,19 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = {
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _rulesAvailability = require('../../utils/rules-availability');
-
-exports.default = _extends({
+  // Enforce `for` loop update clause moving the counter in the right direction
+  // http://eslint.org/docs/rules/for-direction
+  'for-direction': 'error',
 
   // Disallow `await` inside of loops
   // http://eslint.org/docs/rules/no-await-in-loop
-  'no-await-in-loop': 'error'
+  'no-await-in-loop': 'error',
 
-}, (0, _rulesAvailability.check)('no-compare-neg-zero', 'error'), {
+  // Disallow comparing against `-0`
+  // http://eslint.org/docs/rules/no-compare-neg-zero
+  'no-compare-neg-zero': 'error',
 
   // Disallow assignment operators in conditional expressions
   // http://eslint.org/docs/rules/no-cond-assign
@@ -70,7 +71,8 @@ exports.default = _extends({
     conditionalAssign: false,
     ignoreJSX: 'multi-line',
     nestedBinaryExpressions: false,
-    returnAssign: false
+    returnAssign: false,
+    enforceForArrowConditionals: false
   }],
 
   // Disallow unnecessary semicolons
@@ -146,4 +148,4 @@ exports.default = _extends({
   // Enforce comparing `typeof` expressions against valid strings
   // http://eslint.org/docs/rules/valid-typeof
   'valid-typeof': ['error', { requireStringLiterals: true }]
-});
+};

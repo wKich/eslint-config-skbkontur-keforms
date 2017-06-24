@@ -1,5 +1,9 @@
 export default {
 
+  // Prevent extraneous defaultProps on components
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
+  'react/default-props-match-prop-types': ['warn', { allowRequiredDefaults: false }],
+
   // Prevent missing displayName in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
   'react/display-name': ['warn', { ignoreTranspilerName: false }],
@@ -14,13 +18,10 @@ export default {
 
   // Forbid certain propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
-  'react/forbid-prop-types': ['warn', {
-    forbid: [
-      'any',
-      'array',
-      'object',
-    ],
-  }],
+  'react/forbid-prop-types': [
+    'warn',
+    { forbid: ['any', 'array', 'object'] },
+  ],
 
   // Forbid foreign propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
@@ -68,8 +69,11 @@ export default {
 
   // Prevent multiple component definition per file
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
-  // TODO Check if need or not
-  'react/no-multi-comp': ['warn', { ignoreStateless: false }],
+  'react/no-multi-comp': ['warn', { ignoreStateless: true }],
+
+  // Prevent usage of `shouldComponentUpdate` when extending `React.PureComponent`
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
+  'react/no-redundant-should-component-update': 'error',
 
   // Prevent usage of the return value of `React.render`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
@@ -77,7 +81,6 @@ export default {
 
   // Prevent usage of `setState`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
-  // TODO Change to 'error' when use Redux/Reelm in project
   'react/no-set-state': 'off',
 
   // Prevent using string references in `ref` attribute
@@ -94,26 +97,36 @@ export default {
 
   // Prevent definitions of unused prop types
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
-  'react/no-unused-prop-types': ['error', {
-    customValidators: [],
-    skipShapeProps: false,
-  }],
+  'react/no-unused-prop-types': [
+    'error',
+    {
+      customValidators: [],
+      skipShapeProps: false,
+    },
+  ],
+
+  // Prevent usage of `setState` in `componentWillUpdate`
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md
+  'react/no-will-update-set-state': 'error',
 
   // Enforce ES5 or ES6 class for React Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
-  'react/prefer-es6-class': ['error', 'always'],
+  'react/prefer-es6-class': ['warn', 'always'],
 
   // Enforce stateless React Components to be written as a pure function
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-  'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
+  'react/prefer-stateless-function': ['warn', { ignorePureComponents: true }],
 
   // Prevent missing props validation in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
-  'react/prop-types': ['warn', {
-    ignore: [],
-    customValidators: [],
-    skipUndeclared: false,
-  }],
+  'react/prop-types': [
+    'warn',
+    {
+      ignore: [],
+      customValidators: [],
+      skipUndeclared: false,
+    },
+  ],
 
   // Prevent missing `React` when using JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
@@ -134,58 +147,61 @@ export default {
 
   // Prevent extra closing tags for components without children
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
-  'react/self-closing-comp': ['error', {
-    component: true,
-    html: false,
-  }],
+  'react/self-closing-comp': ['warn', { component: true, html: false }],
 
   // Enforce component methods order
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
-  'react/sort-comp': ['warn', {
-    order: [
-      'type-annotations',
-      'static-methods',
-      'lifecycle',
-      'everything-else',
-      '/^on.+$/',
-      'rendering',
-    ],
-    groups: {
-      rendering: [
-        '/^render.+$/',
-        'render',
+  'react/sort-comp': [
+    'warn',
+    {
+      order: [
+        'type-annotations',
+        'static-methods',
+        'lifecycle',
+        'everything-else',
+        '/^on.+$/',
+        'rendering',
       ],
-      lifecycle: [
-        'displayName',
-        'propTypes',
-        'contextTypes',
-        'childContextTypes',
-        'mixins',
-        'statics',
-        'defaultProps',
-        'constructor',
-        'getDefaultProps',
-        'getInitialState',
-        'state',
-        'getChildContext',
-        'componentWillMount',
-        'componentDidMount',
-        'componentWillReceiveProps',
-        'shouldComponentUpdate',
-        'componentWillUpdate',
-        'componentDidUpdate',
-        'componentWillUnmount',
-      ],
+      groups: {
+        rendering: [
+          '/^render.+$/',
+          'render',
+        ],
+        lifecycle: [
+          'displayName',
+          'propTypes',
+          'contextTypes',
+          'childContextTypes',
+          'mixins',
+          'statics',
+          'defaultProps',
+          'constructor',
+          'getDefaultProps',
+          'getInitialState',
+          'state',
+          'getChildContext',
+          'componentWillMount',
+          'componentDidMount',
+          'componentWillReceiveProps',
+          'shouldComponentUpdate',
+          'componentWillUpdate',
+          'componentDidUpdate',
+          'componentWillUnmount',
+        ],
+      },
     },
-  }],
+  ],
 
   // Enforce propTypes declarations alphabetical sorting
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
-  'react/sort-prop-types': ['warn', {
-    callbacksLast: true,
-    ignoreCase: false,
-    requiredFirst: true,
-  }],
+  'react/sort-prop-types': [
+    'warn',
+    {
+      callbacksLast: true,
+      ignoreCase: false,
+      requiredFirst: true,
+    },
+  ],
 
   // Enforce style prop value being an object
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md

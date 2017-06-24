@@ -6,10 +6,7 @@ export default {
 
   // Enforces getter/setter pairs in objects
   // http://eslint.org/docs/rules/accessor-pairs
-  'accessor-pairs': ['off', {
-    setWithoutGet: true,
-    getWithoutSet: false,
-  }],
+  'accessor-pairs': ['off', { setWithoutGet: true, getWithoutSet: false }],
 
   // Enforces `return` statements in callbacks of array’s methods
   // http://eslint.org/docs/rules/array-callback-return
@@ -139,10 +136,7 @@ export default {
 
   // Disallow Labeled Statements
   // http://eslint.org/docs/rules/no-labels
-  'no-labels': ['error', {
-    allowLoop: false,
-    allowSwitch: false,
-  }],
+  'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
 
   // Disallow Unnecessary Nested Blocks
   // http://eslint.org/docs/rules/no-lone-blocks
@@ -155,12 +149,15 @@ export default {
   // Disallow Magic Numbers
   // http://eslint.org/docs/rules/no-magic-numbers
   // TODO Check this need or not
-  'no-magic-numbers': ['warn', {
-    ignore: [0, 1],
-    ignoreArrayIndexes: true,
-    enforceConst: true,
-    detectObjects: false,
-  }],
+  'no-magic-numbers': [
+    'warn',
+    {
+      ignore: [0, 1],
+      ignoreArrayIndexes: true,
+      enforceConst: true,
+      detectObjects: false,
+    },
+  ],
 
   // Disallow multiple spaces
   // http://eslint.org/docs/rules/no-multi-spaces
@@ -237,11 +234,14 @@ export default {
 
   // Disallow Unused Expressions
   // http://eslint.org/docs/rules/no-unused-expressions
-  'no-unused-expressions': ['warn', {
-    allowShortCircuit: false,
-    allowTernary: false,
-    'allowTaggedTemplates': false,
-  }],
+  'no-unused-expressions': [
+    'warn',
+    {
+      allowShortCircuit: false,
+      allowTernary: false,
+      'allowTaggedTemplates': false,
+    },
+  ],
 
   // Disallow Unused Labels
   // http://eslint.org/docs/rules/no-unused-labels
@@ -269,10 +269,13 @@ export default {
 
   // Disallow Warning Comments
   // http://eslint.org/docs/rules/no-warning-comments
-  'no-warning-comments': ['warn', {
-    terms: ['TODO', 'FIXME'],
-    location: 'start',
-  }],
+  'no-warning-comments': [
+    'warn',
+    {
+      terms: ['TODO', 'FIXME'],
+      location: 'start',
+    },
+  ],
 
   // Disallow `with` statements
   // http://eslint.org/docs/rules/no-with

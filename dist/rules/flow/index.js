@@ -35,7 +35,7 @@ exports.default = {
 
   // Warns against weak type annotations `any`, `Object` and `Function`.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-weak-types
-  'flowtype/no-weak-types': ['error', {
+  'flowtype/no-weak-types': ['warn', {
     any: true,
     Object: true,
     Function: true
@@ -51,7 +51,7 @@ exports.default = {
 
   // Requires that functions have return type annotation.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-return-type
-  'flowtype/require-return-type': ['error', 'always', {
+  'flowtype/require-return-type': ['off', 'always', {
     annotateUndefined: 'always',
     excludeArrowFunctions: 'expressionsOnly'
   }],

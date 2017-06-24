@@ -17,12 +17,13 @@ exports.default = {
   // http://eslint.org/docs/rules/handle-callback-err
   'handle-callback-err': ['error', '^(err|error)$'],
 
+  // Disallow use of the `Buffer()` constructor
+  // http://eslint.org/docs/rules/no-buffer-constructor
+  'no-buffer-constructor': 'error',
+
   // Disallow Mixed Requires
   // http://eslint.org/docs/rules/no-mixed-requires
-  'no-mixed-requires': ['error', {
-    grouping: false,
-    allowCall: false
-  }],
+  'no-mixed-requires': ['error', { grouping: false, allowCall: false }],
 
   // Disallow new require
   // http://eslint.org/docs/rules/no-new-require
