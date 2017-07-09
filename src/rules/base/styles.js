@@ -206,7 +206,7 @@ export default {
 
   // Enforce or disallow newlines between operands of ternary expressions
   // http://eslint.org/docs/rules/multiline-ternary
-  'multiline-ternary': ['off', 'always'],
+  'multiline-ternary': ['warn', 'always-multiline'],
 
   // Require constructor `function` names to begin with a capital letter
   // http://eslint.org/docs/rules/new-cap

@@ -47,5 +47,5 @@ export default {
 
   // Disallow Synchronous Methods
   // http://eslint.org/docs/rules/no-sync
-  'no-sync': 'error',
+  'no-sync': ['error', { allowAtRootLevel: true }],
 }

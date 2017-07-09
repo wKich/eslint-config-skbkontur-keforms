@@ -4,6 +4,10 @@ export default {
   // http://eslint.org/docs/rules/for-direction
   'for-direction': 'error',
 
+  // Enforces that a `return` statement is present in property getters
+  // http://eslint.org/docs/rules/getter-return
+  'getter-return': 'error',
+
   // Disallow `await` inside of loops
   // http://eslint.org/docs/rules/no-await-in-loop
   'no-await-in-loop': 'error',
