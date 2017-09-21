@@ -23,7 +23,23 @@ exports.default = {
 
   // Disallow specific global variables
   // http://eslint.org/docs/rules/no-restricted-globals
-  // TODO Check for other variables
+  // NOTE Maybe over names
+  // File
+  // Text
+  // event
+  // getComputedStyle
+  // length
+  // module
+  // name
+  // outerHeight
+  // outerWidth
+  // parent
+  // root
+  // scroll
+  // self
+  // status
+  // stop
+  // top
   'no-restricted-globals': ['error', 'event'],
 
   // Disallow Shadowing

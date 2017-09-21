@@ -77,6 +77,10 @@ export default {
   // http://eslint.org/docs/rules/func-style
   'func-style': ['warn', 'declaration', { allowArrowFunctions: true }],
 
+  // Enforce consistent line breaks inside function parentheses
+  // https://eslint.org/docs/rules/function-paren-newline
+  'function-paren-newline': ['warn', 'multiline'],
+
   // Disallow specified identifiers
   // http://eslint.org/docs/rules/id-blacklist
   'id-blacklist': 'off',
@@ -108,6 +112,9 @@ export default {
       CallExpression: { arguments: 'first' },
       ArrayExpression: 1,
       ObjectExpression: 1,
+      ImportDeclaration: 1,
+      flatTernaryExpressions: false,
+      ignoredNodes: [],
     },
   ],
 
@@ -318,7 +325,15 @@ export default {
 
   // Disallow dangling underscores in identifiers
   // http://eslint.org/docs/rules/no-underscore-dangle
-  'no-underscore-dangle': ['warn', { allowAfterThis: true }],
+  'no-underscore-dangle': [
+    'warn',
+    {
+      allow: [],
+      allowAfterThis: true,
+      allowAfterSuper: true,
+      enforceInMethodNames: true,
+    },
+  ],
 
   // Disallow ternary operators when simpler alternatives exist
   // http://eslint.org/docs/rules/no-unneeded-ternary

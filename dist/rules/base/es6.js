@@ -23,7 +23,13 @@ exports.default = {
 
   // Enforce spacing around the * in generator functions
   // http://eslint.org/docs/rules/generator-star-spacing
-  'generator-star-spacing': ['warn', 'after'],
+  'generator-star-spacing': ['warn', {
+    after: true,
+    before: false,
+    named: { after: true, before: false },
+    method: { after: true, before: false },
+    anonymous: { after: true, before: false }
+  }],
 
   // Disallow modifying variables of class declarations
   // http://eslint.org/docs/rules/no-class-assign
@@ -101,7 +107,10 @@ exports.default = {
 
   // Prefer destructuring from arrays and objects
   // http://eslint.org/docs/rules/prefer-destructuring
-  'prefer-destructuring': ['warn', { array: false, object: true }, { enforceForRenamedProperties: false }],
+  'prefer-destructuring': ['warn', {
+    VariableDeclarator: { array: false, object: true },
+    AssignmentExpression: { array: false, object: true }
+  }, { enforceForRenamedProperties: false }],
 
   // Disallow `parseInt()` in favor of binary, octal, and hexadecimal literals
   // http://eslint.org/docs/rules/prefer-numeric-literals
