@@ -34,10 +34,10 @@
     "eslint-plugin-react": "^7.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "rimraf": "^2.6.1"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "rimraf": "^2.6.2"
   }
 }
