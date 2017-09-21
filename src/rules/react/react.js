@@ -1,5 +1,15 @@
 export default {
 
+  // Enforces consistent naming for boolean props
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
+  'react/boolean-prop-naming': [
+    'warn',
+    {
+      propTypeNames: [''],
+      rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
+    },
+  ],
+
   // Prevent extraneous defaultProps on components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
   'react/default-props-match-prop-types': ['warn', { allowRequiredDefaults: false }],
@@ -83,6 +93,10 @@ export default {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
   'react/no-set-state': 'off',
 
+  // Prevents common typos
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md
+  'react/no-typos': 'error',
+
   // Prevent using string references in `ref` attribute
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
   'react/no-string-refs': 'error',
@@ -104,6 +118,11 @@ export default {
       skipShapeProps: false,
     },
   ],
+
+  // TODO Missing documentation
+  // Prevent definition of unused state fields
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md
+  'react/no-unused-state': 'error',
 
   // Prevent usage of `setState` in `componentWillUpdate`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md
@@ -158,8 +177,10 @@ export default {
         'type-annotations',
         'static-methods',
         'lifecycle',
+        'getters',
+        'setters',
         'everything-else',
-        '/^on.+$/',
+        '/^handle.+$/',
         'rendering',
       ],
       groups: {

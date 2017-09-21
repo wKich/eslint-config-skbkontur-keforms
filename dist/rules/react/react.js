@@ -5,6 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
 
+  // Enforces consistent naming for boolean props
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
+  'react/boolean-prop-naming': ['warn', {
+    propTypeNames: [''],
+    rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+'
+  }],
+
   // Prevent extraneous defaultProps on components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
   'react/default-props-match-prop-types': ['warn', { allowRequiredDefaults: false }],
@@ -85,6 +92,10 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
   'react/no-set-state': 'off',
 
+  // Prevents common typos
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-typos.md
+  'react/no-typos': 'error',
+
   // Prevent using string references in `ref` attribute
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
   'react/no-string-refs': 'error',
@@ -103,6 +114,11 @@ exports.default = {
     customValidators: [],
     skipShapeProps: false
   }],
+
+  // TODO Missing documentation
+  // Prevent definition of unused state fields
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md
+  'react/no-unused-state': 'error',
 
   // Prevent usage of `setState` in `componentWillUpdate`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-will-update-set-state.md
@@ -148,7 +164,7 @@ exports.default = {
   // Enforce component methods order
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
   'react/sort-comp': ['warn', {
-    order: ['type-annotations', 'static-methods', 'lifecycle', 'everything-else', '/^on.+$/', 'rendering'],
+    order: ['type-annotations', 'static-methods', 'lifecycle', 'getters', 'setters', 'everything-else', '/^handle.+$/', 'rendering'],
     groups: {
       rendering: ['/^render.+$/', 'render'],
       lifecycle: ['displayName', 'propTypes', 'contextTypes', 'childContextTypes', 'mixins', 'statics', 'defaultProps', 'constructor', 'getDefaultProps', 'getInitialState', 'state', 'getChildContext', 'componentWillMount', 'componentDidMount', 'componentWillReceiveProps', 'shouldComponentUpdate', 'componentWillUpdate', 'componentDidUpdate', 'componentWillUnmount']

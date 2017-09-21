@@ -81,7 +81,7 @@ exports.default = {
   // Prevent usage of unwrapped JSX strings
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
   // NOTE For now literals is escaped in dev bundle https://github.com/babel/babel/issues/4909
-  'react/jsx-no-literals': 'warn',
+  'react/jsx-no-literals': ['warn', { noStrings: false }],
 
   // Prevent usage of unsafe `target='_blank'`
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
