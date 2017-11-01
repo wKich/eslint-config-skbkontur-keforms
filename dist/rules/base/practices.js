@@ -76,7 +76,7 @@ exports.default = {
 
   // Disallow `return` before `else`
   // http://eslint.org/docs/rules/no-else-return
-  'no-else-return': 'error',
+  'no-else-return': ['error', { allowElseIf: true }],
 
   // Disallow empty functions
   // http://eslint.org/docs/rules/no-empty-function

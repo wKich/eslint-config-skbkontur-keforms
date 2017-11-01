@@ -26,7 +26,7 @@
   "homepage": "https://github.com/wkich/eslint-config-skbkontur-keforms#readme",
   "dependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.7.1",
+    "eslint": "^4.10.0",
     "eslint-import-resolver-node": "^0.3.1",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-flowtype": "^2.35.1",

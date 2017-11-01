@@ -152,11 +152,17 @@ exports.default = {
     afterLineComment: false,
     allowBlockStart: true,
     allowBlockEnd: false,
+    allowClassStart: true,
+    allowClassEnd: false,
     allowObjectStart: true,
     allowObjectEnd: false,
     allowArrayStart: true,
     allowArrayEnd: false
   }],
+
+  // Require or disallow an empty line between class members
+  // https://eslint.org/docs/rules/lines-between-class-members
+  'lines-between-class-members': ['warn', 'always', { exceptAfterSingleLine: true }],
 
   // Enforce a maximum depth that blocks can be nested
   // http://eslint.org/docs/rules/max-depth
@@ -199,6 +205,10 @@ exports.default = {
   // Enforce a maximum number of statements allowed per line
   // http://eslint.org/docs/rules/max-statements-per-line
   'max-statements-per-line': ['warn', { max: 1 }],
+
+  // Enforce a particular style for multiline comments
+  // https://eslint.org/docs/rules/multiline-comment-style
+  'multiline-comment-style': 'off',
 
   // Enforce or disallow newlines between operands of ternary expressions
   // http://eslint.org/docs/rules/multiline-ternary
@@ -411,7 +421,9 @@ exports.default = {
     require: {
       FunctionDeclaration: true,
       MethodDefinition: true,
-      ClassDeclaration: true
+      ClassDeclaration: true,
+      ArrowFunctionExpression: true,
+      FunctionExpression: true
     }
   }],
 
