@@ -20,6 +20,11 @@ export default {
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-dupe-keys
   'flowtype/no-dupe-keys': 'error',
 
+  // Requires use of `$ReadOnlyArray` instead of just `Array` or array shorthand notation
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-mutable-array
+  // TODO Disable for now
+  'flowtype/no-mutable-array': 'off',
+
   // Disallows use of primitive constructors as types, such as `Boolean`, `Number` and `String`.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-primitive-constructor-types
   'flowtype/no-primitive-constructor-types': 'error',
@@ -27,6 +32,11 @@ export default {
   // Disallows Flow type imports, aliases, and annotations in files missing a valid Flow file declaration.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-types-missing-file-annotation
   'flowtype/no-types-missing-file-annotation': 'error',
+
+  // Ignores type cast expressions, but otherwise behaves the same as ESLint's `no-unused-expressions`
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-unused-expressions
+  // TODO Check usage
+  'flowtype/no-unused-expressions': 'warn',
 
   // Warns against weak type annotations `any`, `Object` and `Function`.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-weak-types
