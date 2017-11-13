@@ -98,7 +98,7 @@ export default {
 
   // Enforce curly braces or disallow unnecessary curly braces in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
-  'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'always' }],
+  'react/jsx-curly-brace-presence': ['off', { props: 'never', children: 'always' }],
 
   // Enforce PascalCase for user-defined JSX components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md

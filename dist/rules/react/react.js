@@ -7,7 +7,8 @@ exports.default = {
 
   // Enforces consistent naming for boolean props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
-  'react/boolean-prop-naming': ['warn', {
+  // TODO Disable because this issue https://github.com/yannickcr/eslint-plugin-react/issues/1452
+  'react/boolean-prop-naming': ['off', {
     propTypeNames: [''],
     rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+'
   }],
