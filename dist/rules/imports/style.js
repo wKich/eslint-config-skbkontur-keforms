@@ -9,6 +9,10 @@ exports.default = {
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
   'import/first': ['warn', 'absolute-first'],
 
+  // Ensure all exports appear after other statements
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
+  'import/exports-last': 'warn',
+
   // Report repeated import of the same module in multiple places
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
   'import/no-duplicates': 'error',
