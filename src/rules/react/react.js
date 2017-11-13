@@ -112,7 +112,7 @@ export default {
   // Prevent definitions of unused prop types
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
   'react/no-unused-prop-types': [
-    'error',
+    'warn',
     {
       customValidators: [],
       skipShapeProps: false,
