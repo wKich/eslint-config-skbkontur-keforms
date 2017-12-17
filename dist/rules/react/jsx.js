@@ -90,6 +90,10 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
   'react/jsx-no-undef': 'error',
 
+  // Limit to one expression per line in JSX
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
+  'react/jsx-one-expression-per-line': 'warn',
+
   // Enforce curly braces or disallow unnecessary curly braces in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
   'react/jsx-curly-brace-presence': ['off', { props: 'never', children: 'always' }],
@@ -128,9 +132,12 @@ exports.default = {
   // Prevent missing parentheses around multilines JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
   'react/jsx-wrap-multilines': ['warn', {
-    declaration: true,
-    assignment: true,
-    return: true,
-    arrow: true
+    declaration: 'parens-new-line',
+    assignment: 'parens-new-line',
+    return: 'parens-new-line',
+    arrow: 'parens-new-line',
+    condition: 'parens-new-line',
+    logical: 'parens-new-line',
+    prop: 'parens-new-line'
   }]
 };

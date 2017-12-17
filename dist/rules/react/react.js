@@ -12,9 +12,17 @@ exports.default = {
     rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+'
   }],
 
+  // Prevent usage of `button` elements without an explicit `type` attribute
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
+  'react/button-has-type': 'off',
+
   // Prevent extraneous defaultProps on components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
   'react/default-props-match-prop-types': ['warn', { allowRequiredDefaults: false }],
+
+  // Rule enforces consistent usage of destructuring assignment in component
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+  'react/destructuring-assignment': ['warn', 'always'],
 
   // Prevent missing displayName in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -30,11 +38,19 @@ exports.default = {
 
   // Forbid certain propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
-  'react/forbid-prop-types': ['warn', { forbid: ['any', 'array', 'object'] }],
+  'react/forbid-prop-types': ['warn', {
+    forbid: ['any', 'array', 'object'],
+    checkContextTypes: true,
+    checkChildContextTypes: true
+  }],
 
   // Forbid foreign propTypes
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
   'react/forbid-foreign-prop-types': 'warn',
+
+  // Prevent using `this.state` within a `this.setState`
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
+  'react/no-access-state-in-setstate': 'error',
 
   // Prevent using Array index in `key` props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
@@ -145,7 +161,7 @@ exports.default = {
 
   // Enforce a defaultProps definition for every prop that is not a required prop
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
-  'react/require-default-props': 'error',
+  'react/require-default-props': ['warn', { forbidDefaultForRequired: true }],
 
   // Enforce React components to have a shouldComponentUpdate method
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
@@ -174,7 +190,8 @@ exports.default = {
   'react/sort-prop-types': ['warn', {
     callbacksLast: true,
     ignoreCase: false,
-    requiredFirst: true
+    requiredFirst: true,
+    sortShapeProp: true
   }],
 
   // Enforce style prop value being an object
