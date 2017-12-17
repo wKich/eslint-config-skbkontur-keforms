@@ -97,6 +97,10 @@ exports.default = {
   // http://eslint.org/docs/rules/id-match
   'id-match': 'off',
 
+  // Enforce the location of arrow function bodies with implicit returns
+  // https://eslint.org/docs/rules/implicit-arrow-linebreak
+  'implicit-arrow-linebreak': ['warn', 'beside'],
+
   // Enforce consistent indentation
   // http://eslint.org/docs/rules/indent
   'indent': ['warn', INDENT_SIZE, {
@@ -428,7 +432,7 @@ exports.default = {
 
   // Enforce or Disallow Semicolons
   // http://eslint.org/docs/rules/semi
-  'semi': ['warn', 'never'],
+  'semi': ['warn', 'never', { beforeStatementContinuationChars: 'never' }],
 
   // Enforce spacing before and after semicolons
   // http://eslint.org/docs/rules/semi-spacing
