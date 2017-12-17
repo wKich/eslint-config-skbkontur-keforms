@@ -1,5 +1,4 @@
 export default {
-
   // Enforces consistent naming for boolean props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
   // TODO Disable because this issue https://github.com/yannickcr/eslint-plugin-react/issues/1452
@@ -120,7 +119,6 @@ export default {
     },
   ],
 
-  // TODO Missing documentation
   // Prevent definition of unused state fields
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-state.md
   'react/no-unused-state': 'error',
@@ -158,7 +156,6 @@ export default {
 
   // Enforce React components to have a shouldComponentUpdate method
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
-  // TODO Do we need use this
   'react/require-optimization': ['warn', { allowDecorators: [] }],
 
   // Enforce ES5 or ES6 class for returning value in render function

@@ -1,5 +1,4 @@
 export default {
-
   // Enforces a particular style for boolean type annotations. This rule takes one argument.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-boolean-style
   'flowtype/boolean-style': ['error', 'boolean'],
@@ -22,7 +21,6 @@ export default {
 
   // Requires use of `$ReadOnlyArray` instead of just `Array` or array shorthand notation
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-mutable-array
-  // TODO Disable for now
   'flowtype/no-mutable-array': 'off',
 
   // Disallows use of primitive constructors as types, such as `Boolean`, `Number` and `String`.
@@ -55,7 +53,7 @@ export default {
 
   // Requires that all function parameters have type annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-parameter-type
-  'flowtype/require-parameter-type': ['error', { excludeArrowFunctions: 'expressionsOnly' }],
+  'flowtype/require-parameter-type': ['off', { excludeArrowFunctions: 'expressionsOnly' }],
 
   // Requires that functions have return type annotation.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-return-type

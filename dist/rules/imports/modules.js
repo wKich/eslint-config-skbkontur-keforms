@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-
   // Report potentially ambiguous parse goal (`script` vs. `module`)
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
   'import/unambiguous': 'error',

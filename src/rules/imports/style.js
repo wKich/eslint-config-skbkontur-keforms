@@ -1,5 +1,4 @@
 export default {
-
   // Ensure all imports appear before other statements
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
   'import/first': ['warn', 'absolute-first'],

@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-
   // Enforce `return` After Callback
   // http://eslint.org/docs/rules/callback-return
   'callback-return': ['error', ['callback', 'cb', 'done', 'next']],
@@ -47,8 +46,7 @@ exports.default = {
 
   // Disallow certain object properties
   // http://eslint.org/docs/rules/no-restricted-properties
-  // TODO Add list of restricted properties
-  'no-restricted-properties': 'error',
+  'no-restricted-properties': 'off',
 
   // Disallow Synchronous Methods
   // http://eslint.org/docs/rules/no-sync

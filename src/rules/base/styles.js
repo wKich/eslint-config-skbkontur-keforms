@@ -7,7 +7,6 @@ const MAX_FUNCTION_PARAMS = 4
 const MAX_FUNCTION_STATEMENTS = 30
 
 export default {
-
   // Enforce line breaks after opening and before closing array brackets
   // http://eslint.org/docs/rules/array-bracket-newline
   'array-bracket-newline': ['warn', { multiline: true, minItems: null }],

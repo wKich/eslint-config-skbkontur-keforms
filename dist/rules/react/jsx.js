@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 const INDENT_SIZE = 2;
 
 exports.default = {
-
   // Enforce boolean attributes notation in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
   'react/jsx-boolean-value': ['warn', 'never'],

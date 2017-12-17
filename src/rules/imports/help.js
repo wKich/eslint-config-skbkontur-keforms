@@ -1,5 +1,4 @@
 export default {
-
   // Report any invalid exports, i.e. re-export of the same name
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
   'import/export': 'error',

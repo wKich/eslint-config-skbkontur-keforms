@@ -3,7 +3,6 @@
 const MAX_COMPLEXITY_LEVEL = 10
 
 export default {
-
   // Enforces getter/setter pairs in objects
   // http://eslint.org/docs/rules/accessor-pairs
   'accessor-pairs': ['off', { setWithoutGet: true, getWithoutSet: false }],
@@ -127,7 +126,7 @@ export default {
 
   // Disallow `this` keywords outside of classes or class-like objects
   // http://eslint.org/docs/rules/no-invalid-this
-  // TODO Using babel/no-invalid-this instead
+  // NOTE Using babel/no-invalid-this instead
   'no-invalid-this': 'off',
 
   // Disallow the use of the `__iterator__` property
@@ -148,9 +147,8 @@ export default {
 
   // Disallow Magic Numbers
   // http://eslint.org/docs/rules/no-magic-numbers
-  // TODO Check this need or not
   'no-magic-numbers': [
-    'warn',
+    'off',
     {
       ignore: [0, 1],
       ignoreArrayIndexes: true,
@@ -189,7 +187,6 @@ export default {
 
   // Disallow Reassignment of Function Parameters
   // http://eslint.org/docs/rules/no-param-reassign
-  // TODO Check how difficult to refactor
   'no-param-reassign': ['error', { props: true }],
 
   // Disallow Use of `__proto__`

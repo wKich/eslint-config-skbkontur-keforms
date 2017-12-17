@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-
   // Require braces in arrow function body
   // http://eslint.org/docs/rules/arrow-body-style
   'arrow-body-style': ['warn', 'as-needed', { requireReturnForObjectLiteral: false }],
@@ -118,7 +117,6 @@ exports.default = {
 
   // Suggest using Reflect methods where applicable
   // http://eslint.org/docs/rules/prefer-reflect
-  // TODO Deprecated
   'prefer-reflect': 'off',
 
   // Suggest using the rest parameters instead of `arguments`
@@ -135,7 +133,6 @@ exports.default = {
 
   // Disallow generator functions that do not have `yield`
   // http://eslint.org/docs/rules/require-yield
-  // TODO Check if need or nor
   'require-yield': 'error',
 
   // Enforce spacing between rest and spread operators and their expressions

@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-
   // Enforce `for` loop update clause moving the counter in the right direction
   // http://eslint.org/docs/rules/for-direction
   'for-direction': 'error',
@@ -146,8 +145,7 @@ exports.default = {
 
   // Enforce valid JSDoc comments
   // http://eslint.org/docs/rules/valid-jsdoc
-  // TODO write options
-  'valid-jsdoc': 'error',
+  'valid-jsdoc': 'off',
 
   // Enforce comparing `typeof` expressions against valid strings
   // http://eslint.org/docs/rules/valid-typeof

@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-
   // Enforce/Disallow Variable Initializations
   // http://eslint.org/docs/rules/init-declarations
   'init-declarations': ['error', 'always'],
