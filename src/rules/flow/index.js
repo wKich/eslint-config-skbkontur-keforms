@@ -19,6 +19,10 @@ export default {
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-dupe-keys
   'flowtype/no-dupe-keys': 'error',
 
+  // Disallows `$FlowFixMe` comment suppressions.
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-flow-fix-me-comments
+  'flowtype/no-flow-fix-me-comments': 'off',
+
   // Requires use of `$ReadOnlyArray` instead of just `Array` or array shorthand notation
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-mutable-array
   'flowtype/no-mutable-array': 'off',
