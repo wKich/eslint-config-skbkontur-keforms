@@ -119,7 +119,8 @@ exports.default = {
     ObjectExpression: 1,
     ImportDeclaration: 1,
     flatTernaryExpressions: false,
-    ignoredNodes: []
+    ignoredNodes: [],
+    ignoreComments: false
   }],
 
   // Enforce the consistent use of either double or single quotes in JSX attributes

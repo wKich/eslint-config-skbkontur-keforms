@@ -9,7 +9,7 @@ export default {
 
   // Enforces `return` statements in callbacks of array’s methods
   // http://eslint.org/docs/rules/array-callback-return
-  'array-callback-return': 'error',
+  'array-callback-return': ['error', { allowImplicit: false }],
 
   // Treat var as Block Scoped
   // http://eslint.org/docs/rules/block-scoped-var

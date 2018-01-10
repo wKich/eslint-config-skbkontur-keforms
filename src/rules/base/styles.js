@@ -118,6 +118,7 @@ export default {
       ImportDeclaration: 1,
       flatTernaryExpressions: false,
       ignoredNodes: [],
+      ignoreComments: false,
     },
   ],
 
