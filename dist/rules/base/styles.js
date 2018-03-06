@@ -334,16 +334,21 @@ exports.default = {
 
   // Enforce consistent line breaks inside braces
   // http://eslint.org/docs/rules/object-curly-newline
-  // TODO Need to tune `minProperties` count
   'object-curly-newline': ['warn', {
     ObjectExpression: {
       consistent: true,
-      minProperties: 3,
       multiline: true
     },
     ObjectPattern: {
       consistent: true,
-      minProperties: 3,
+      multiline: true
+    },
+    ImportDeclaration: {
+      consistent: true,
+      multiline: true
+    },
+    ExportDeclaration: {
+      consistent: true,
       multiline: true
     }
   }],
@@ -354,7 +359,7 @@ exports.default = {
 
   // Enforce placing object properties on separate lines
   // http://eslint.org/docs/rules/object-property-newline
-  'object-property-newline': ['warn', { allowMultiplePropertiesPerLine: true }],
+  'object-property-newline': ['warn', { allowAllPropertiesOnSameLine: true }],
 
   // Require or Disallow One Variable Declaration per Scope
   // http://eslint.org/docs/rules/one-var
