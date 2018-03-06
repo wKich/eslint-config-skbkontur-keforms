@@ -6,9 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   // Enforces consistent naming for boolean props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
-  // TODO Disable because this issue https://github.com/yannickcr/eslint-plugin-react/issues/1452
-  'react/boolean-prop-naming': ['off', {
-    propTypeNames: [''],
+  'react/boolean-prop-naming': ['warn', {
+    propTypeNames: ['bool'],
     rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+'
   }],
 
@@ -31,6 +30,10 @@ exports.default = {
   // Forbid certain props on Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
   'react/forbid-component-props': ['warn', { forbid: ['className', 'style'] }],
+
+  // Forbid certain props on DOM Nodes
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md
+  'react/forbid-dom-props': ['warn', { forbid: [] }],
 
   // Forbid certain elements
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
@@ -116,6 +119,9 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
   'react/no-string-refs': 'error',
 
+  // Prevent using this in stateless functional components
+  'react/no-this-in-sfc': 'error',
+
   // Prevent invalid characters from appearing in markup
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
   'react/no-unescaped-entities': 'error',
@@ -178,7 +184,7 @@ exports.default = {
   // Enforce component methods order
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
   'react/sort-comp': ['warn', {
-    order: ['type-annotations', 'static-methods', 'lifecycle', 'getters', 'setters', 'everything-else', '/^handle.+$/', 'rendering'],
+    order: ['type-annotations', 'static-methods', 'instance-variables', 'lifecycle', 'getters', 'setters', 'instance-methods', 'everything-else', '/^handle.+$/', 'rendering'],
     groups: {
       rendering: ['/^render.+$/', 'render'],
       lifecycle: ['displayName', 'propTypes', 'contextTypes', 'childContextTypes', 'mixins', 'statics', 'defaultProps', 'constructor', 'getDefaultProps', 'getInitialState', 'state', 'getChildContext', 'componentWillMount', 'componentDidMount', 'componentWillReceiveProps', 'shouldComponentUpdate', 'componentWillUpdate', 'componentDidUpdate', 'componentWillUnmount']

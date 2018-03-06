@@ -10,6 +10,10 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
   'react/jsx-boolean-value': ['warn', 'never'],
 
+  // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
+  'react/jsx-child-element-spacing': ['warn'],
+
   // Validate closing bracket location in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
   'react/jsx-closing-bracket-location': ['warn', 'line-aligned'],
@@ -57,6 +61,10 @@ exports.default = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
   'react/jsx-key': 'error',
 
+  // Validate JSX maximum depth
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md
+  'react/jsx-max-depth': ['off', { max: 5 }],
+
   // Limit maximum of props on a single line in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
   'react/jsx-max-props-per-line': ['warn', { maximum: 2, when: 'multiline' }],
@@ -100,7 +108,10 @@ exports.default = {
 
   // Enforce PascalCase for user-defined JSX components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
-  'react/jsx-pascal-case': ['error', { allowAllCaps: false }],
+  'react/jsx-pascal-case': ['warn', { allowAllCaps: false }],
+
+  // Enforce default props alphabetical sorting
+  'react/jsx-sort-default-props': ['warn', { ignoreCase: false }],
 
   // Enforce props alphabetical sorting
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
@@ -118,7 +129,8 @@ exports.default = {
   'react/jsx-tag-spacing': ['warn', {
     closingSlash: 'never',
     beforeSelfClosing: 'always',
-    afterOpening: 'never'
+    afterOpening: 'never',
+    beforeClosing: 'never'
   }],
 
   // Prevent React to be incorrectly marked as unused
