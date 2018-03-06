@@ -411,7 +411,7 @@ export default {
 
   // Operator Linebreak
   // http://eslint.org/docs/rules/operator-linebreak
-  'operator-linebreak': ['warn', 'before'],
+  'operator-linebreak': ['warn', 'before', { overrides: { '=': 'after' } }],
 
   // Enforce padding within blocks
   // http://eslint.org/docs/rules/padded-blocks

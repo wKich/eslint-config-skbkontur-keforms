@@ -41,7 +41,7 @@ exports.default = {
 
   // Limit the maximum number of dependencies a module can have
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
-  'import/max-dependencies': ['warn', { max: 10 }],
+  'import/max-dependencies': ['off', { max: 10 }],
 
   // Forbid unassigned imports
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
