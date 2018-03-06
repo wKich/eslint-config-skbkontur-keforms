@@ -20,9 +20,17 @@ exports.default = {
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-generic-spacing
   'flowtype/generic-spacing': ['warn', 'never'],
 
+  // This rule requires an empty line after the Flow annotation.
+  // https://github.com/gajus/eslint-plugin-flowtype/blob/master/.README/rules/newline-after-flow-annotation.md
+  'flowtype/newline-after-flow-annotation': ['warn', 'always'],
+
   // Checks for duplicate properties in Object annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-dupe-keys
   'flowtype/no-dupe-keys': 'error',
+
+  // Disallows use of the existential type (*)
+  // https://github.com/gajus/eslint-plugin-flowtype/blob/master/.README/rules/no-existential-type.md
+  'flowtype/no-existential-type': 'off',
 
   // Disallows `$FlowFixMe` comment suppressions.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-no-flow-fix-me-comments
@@ -57,6 +65,10 @@ exports.default = {
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-object-type-delimiter
   'flowtype/object-type-delimiter': ['error', 'comma'],
 
+  // This rule enforces exact object types
+  // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-exact-type
+  'flowtype/require-exact-type': ['error', 'always'],
+
   // Requires that all function parameters have type annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-parameter-type
   'flowtype/require-parameter-type': ['off', { excludeArrowFunctions: 'expressionsOnly' }],
@@ -67,6 +79,10 @@ exports.default = {
     annotateUndefined: 'always',
     excludeArrowFunctions: 'expressionsOnly'
   }],
+
+  // Requires all type declarations to be at the top of the file, after any import declarations.
+  // https://github.com/gajus/eslint-plugin-flowtype/blob/master/.README/rules/require-types-at-top.md
+  'flowtype/require-types-at-top': ['warn', 'always'],
 
   // This rule validates Flow file annotations.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-valid-file-annotation
@@ -102,6 +118,10 @@ exports.default = {
   // Enforces a consistent naming pattern for type aliases.
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-type-id-match
   'flowtype/type-id-match': ['warn', '^([A-Z][a-z0-9]*)+$'],
+
+  // Enforces a particular style for type imports
+  // https://github.com/gajus/eslint-plugin-flowtype/blob/master/.README/rules/type-import-style.md
+  'flowtype/type-import-style': ['off', 'declaration'],
 
   // Enforces consistent spacing around union and intersection type separators (`|` and `&`).
   // https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-union-intersection-spacing
