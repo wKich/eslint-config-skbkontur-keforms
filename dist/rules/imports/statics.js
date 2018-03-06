@@ -38,5 +38,9 @@ exports.default = {
 
   // Forbid Webpack loader syntax in imports
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
-  'import/no-webpack-loader-syntax': 'error'
+  'import/no-webpack-loader-syntax': 'error',
+
+  // Forbid a module from importing itself
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md
+  'import/no-self-import': 'error'
 };

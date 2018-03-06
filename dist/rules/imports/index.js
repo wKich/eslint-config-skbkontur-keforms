@@ -24,4 +24,9 @@ var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _extends({}, _help2.default, _modules2.default, _statics2.default, _style2.default);
+exports.default = _extends({}, _help2.default, _modules2.default, _statics2.default, _style2.default, {
+
+  // TODO Move this rule after docs will be added
+  // https://github.com/benmosher/eslint-plugin-import/issues/1032
+  'import/no-useless-path-segments': 'warn'
+});

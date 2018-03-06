@@ -41,7 +41,7 @@ export default {
 
   // Prefer a default export if module exports a single name
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-  'import/prefer-default-export': 'error',
+  'import/prefer-default-export': 'warn',
 
   // Limit the maximum number of dependencies a module can have
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
@@ -58,6 +58,10 @@ export default {
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
   'import/no-named-default': 'error',
 
+  // Prohibit default exports
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md
+  'import/no-default-export': 'off',
+
   // Forbid anonymous values as default exports
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
   'import/no-anonymous-default-export': [
@@ -67,8 +71,13 @@ export default {
       allowArrowFunction: false,
       allowAnonymousClass: false,
       allowAnonymousFunction: false,
+      allowCallExpression: true,
       allowLiteral: true,
       allowObject: true,
     },
   ],
+
+  // Reports when named exports are not grouped together
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/group-exports.md
+  'import/group-exports': 'off',
 }

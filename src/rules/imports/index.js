@@ -8,4 +8,8 @@ export default {
   ...modules,
   ...statics,
   ...style,
+
+  // TODO Move this rule after docs will be added
+  // https://github.com/benmosher/eslint-plugin-import/issues/1032
+  'import/no-useless-path-segments': 'warn',
 }
