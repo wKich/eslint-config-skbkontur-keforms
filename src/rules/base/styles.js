@@ -349,7 +349,7 @@ export default {
       allow: [],
       allowAfterThis: true,
       allowAfterSuper: true,
-      enforceInMethodNames: true,
+      enforceInMethodNames: false,
     },
   ],
 

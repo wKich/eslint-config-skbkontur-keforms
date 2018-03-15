@@ -317,7 +317,7 @@ exports.default = {
     allow: [],
     allowAfterThis: true,
     allowAfterSuper: true,
-    enforceInMethodNames: true
+    enforceInMethodNames: false
   }],
 
   // Disallow ternary operators when simpler alternatives exist
